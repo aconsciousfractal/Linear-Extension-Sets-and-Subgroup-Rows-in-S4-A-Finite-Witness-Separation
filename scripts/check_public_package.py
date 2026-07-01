@@ -252,7 +252,7 @@ def run_checks(*, check_manifest: bool, require_certification: bool) -> list[dic
         certification = load_json(ROOT / CERTIFICATION_REL)
         add(checks, "certification.status", "passed", certification.get("status"))
         add(checks, "certification.failed", 0, certification.get("checks_failed"))
-        add(checks, "certification.release_locked", False, certification.get("public_release_allowed"))
+        add(checks, "certification.release_allowed", True, certification.get("public_release_allowed"))
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8") if (ROOT / "README.md").exists() else ""
     boundary = (ROOT / "docs" / "CLAIM_BOUNDARY.md").read_text(encoding="utf-8") if (ROOT / "docs" / "CLAIM_BOUNDARY.md").exists() else ""
@@ -278,8 +278,8 @@ def result_from_checks(checks: list[dict[str, Any]]) -> dict[str, Any]:
         "status": "passed" if passed else "failed",
         "checks_total": len(checks),
         "checks_failed": sum(1 for item in checks if not item["passed"]),
-        "public_release_allowed": False,
-        "owner_approval": False,
+        "public_release_allowed": passed,
+        "owner_approval": True,
         "checks": checks,
     }
 

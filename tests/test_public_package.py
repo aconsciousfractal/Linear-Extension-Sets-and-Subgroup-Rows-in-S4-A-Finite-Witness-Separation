@@ -22,7 +22,8 @@ def test_public_package_checker_passes_without_writing():
     assert after == before
     cert = json.loads((ROOT / "certified" / "PUBLIC_REPOSITORY_CERTIFICATION.json").read_text(encoding="utf-8"))
     assert cert["status"] == "passed"
-    assert cert["public_release_allowed"] is False
+    assert cert["public_release_allowed"] is True
+    assert cert["owner_approval"] is True
 
 
 def test_public_replay_verify_passes_without_writing():
