@@ -1,0 +1,42 @@
+\section{Selected Structural Comparison}
+\label{sec:selected-comparison}
+
+The preceding sections put two main structural tests on the same ambient set \(\Sfour\): exact poset-cone status and subgroup-row status. The comparison in this section uses selected witnesses only. It is not a classification of all selected data rows and not a classification of all subsets of \(\Sfour\).
+
+In \cref{tab:selected-witnesses}, the induced-cosets column is bookkeeping induced by subgroup status under \cref{def:composition-convention}. A ``yes'' in that column means that the row is a subgroup \(H\le\Sfour\), so its left and right cosets partition \(\Sfour\). It is not a separate geometric tiling statement and is not used as an independent structural axis.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{0.18\textwidth}ccc p{0.30\textwidth}@{}}
+\toprule
+Witness & Exact & Subgroup & Induced cosets & Role \\
+\midrule
+\(\{\word{1234}\}\) & yes & yes & yes & overlap at the identity row \\
+\(\Sfour\) & yes & yes & yes & overlap at the full group row \\
+N-poset row & yes & no & no & exact poset cone outside subgroup rows \\
+\(\Dfour\) row & no & yes & yes & subgroup row outside exact poset cones \\
+\(\Vfour\) row & no & yes & yes & subgroup row outside exact poset cones \\
+\bottomrule
+\end{tabular}
+\caption{Selected witnesses used for \cref{prop:selected-structural-comparison}. The induced-cosets column is subgroup bookkeeping. The table compares only the displayed rows and is not a full data-package classification.}
+\label{tab:selected-witnesses}
+\end{table}
+
+\begin{theorem}[Selected witnesses separate poset-cone and subgroup-row status]
+\label{prop:selected-structural-comparison}
+The displayed rows in \cref{tab:selected-witnesses} witness that exact poset-cone status and subgroup-row status are not equivalent predicates on subsets of \(\Sfour\).
+\end{theorem}
+
+\begin{proof}
+By \cref{prop:n-poset-witness}, the N-poset row is an exact poset cone and has five elements. Since \(5\nmid 24\), it is not a subgroup row of \(\Sfour\). Thus exact poset-cone status does not imply subgroup-row status.
+
+Conversely, by \cref{cor:d4-v4-not-poset-cones,cor:d4-v4-subgroup-cosets}, the fixed \(\Dfour\) and \(\Vfour\) rows are subgroup rows, but neither is an exact poset cone. Hence subgroup-row status does not imply exact poset-cone status.
+
+The two overlap rows in \cref{tab:selected-witnesses} record that the fields are not disjoint. The singleton \(\{\word{1234}\}\) is \(\Lin(P)\) for the chain \(1<2<3<4\), and \(\word{1234}\) is the identity subgroup under the group convention. The full row \(\Sfour\) is \(\Lin(P)\) for the antichain on \([4]\), and it is also the full subgroup of itself. These overlap rows are not needed to prove non-equivalence, but they prevent the stronger and false reading that poset-cone and subgroup rows are disjoint classes.
+\end{proof}
+
+\begin{remark}[Boundary of the comparison]
+\label{rem:comparison-boundary}
+\Cref{prop:selected-structural-comparison} separates exact poset-cone status from subgroup-row status. It does not prove a separate pairwise non-equivalence theorem between subgroup-row status and subgroup-coset partition status. In this paper, the induced coset entries for the displayed subgroup rows are the standard left and right coset partitions induced by subgroup status. A full selected-data comparison theorem would require a new row-by-row statement and a separate certificate.
+\end{remark}

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the paper."
+title: "Linear-Extension Sets and Subgroup Rows in S4: A Finite Witness Separation"
+authors:
+  - family-names: "Babanskyy"
+    given-names: "Oleksiy"
+repository-code: "https://github.com/aconsciousfractal/Linear-Extension-Sets-and-Subgroup-Rows-in-S4-A-Finite-Witness-Separation"
+version: "0.1.0"

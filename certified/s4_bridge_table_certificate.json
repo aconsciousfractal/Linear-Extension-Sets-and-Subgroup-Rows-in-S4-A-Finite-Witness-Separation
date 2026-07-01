@@ -1,0 +1,105 @@
+{
+  "artifact": "results/s4layer_s4_bridge_table.json",
+  "checks": [
+    {
+      "expected": 24,
+      "id": "count.s4_rows",
+      "observed": 24,
+      "passed": true
+    },
+    {
+      "expected": 24,
+      "id": "count.unique_words",
+      "observed": 24,
+      "passed": true
+    },
+    {
+      "expected": 24,
+      "id": "count.unique_flags",
+      "observed": 24,
+      "passed": true
+    },
+    {
+      "expected": 24,
+      "id": "count.unique_diagonals",
+      "observed": 24,
+      "passed": true
+    },
+    {
+      "expected": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "count.first_word_lexicographic",
+      "observed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "passed": true
+    },
+    {
+      "expected": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "id": "count.last_word_lexicographic",
+      "observed": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "expected": true,
+      "id": "row_checks.all_pass",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "expected": [],
+      "id": "boundary.no_forbidden_claim_phrase",
+      "observed": [],
+      "passed": true
+    },
+    {
+      "expected": {
+        "flag_chains": 24,
+        "labels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "permutation_diagonals": 24,
+        "s4_words": 24
+      },
+      "id": "counts.match_table_header",
+      "observed": {
+        "flag_chains": 24,
+        "labels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "permutation_diagonals": 24,
+        "s4_words": 24
+      },
+      "passed": true
+    }
+  ],
+  "checks_failed": 0,
+  "checks_total": 9,
+  "project": "s4_layer_public_package",
+  "public_claim_boundary": "finite_indexing_artifact_only_not_public_theorem",
+  "schema": "s4layer.s4layer.s4_bridge_table_certification.v0.1",
+  "status": "passed"
+}

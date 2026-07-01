@@ -1,0 +1,44 @@
+\section{Selected Witness Extracts}
+\label{app:selected-witness-tables}
+
+This appendix gives the finite witness extract used by \cref{prop:selected-structural-comparison}. It is derived from \path{results/s4_structural_comparison.json} and the table extract \path{tables/s4_selected_witness_comparison.md}. The extract is included only to make the displayed witnesses inspectable; it is not a full selected-data table and does not add a classification claim.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{0.20\textwidth}rccc r p{0.20\textwidth}@{}}
+\toprule
+Witness & Size & Exact & Subgroup & Induced cosets & Closure & Role \\
+\midrule
+\(\{\word{1234}\}\) & 1 & yes & yes & yes & 1 & overlap control \\
+\(\Sfour\) & 24 & yes & yes & yes & 24 & overlap control \\
+N-poset row & 5 & yes & no & no & 5 & exact poset cone outside subgroup rows \\
+\(\Dfour\) row & 8 & no & yes & yes & 24 & subgroup row outside exact poset cones \\
+\(\Vfour\) row & 4 & no & yes & yes & 24 & subgroup row outside exact poset cones \\
+\bottomrule
+\end{tabular}
+\caption{Selected witness status extract. ``Induced cosets'' means the induced left and right subgroup-coset partition under the convention of \cref{def:composition-convention}. The table compares only these five displayed witnesses.}
+\label{tab:appendix-selected-witness-status}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{0.18\textwidth}p{0.40\textwidth}p{0.22\textwidth}p{0.10\textwidth}@{}}
+\toprule
+Witness & One-line words & Common-precedence relations & \(\psA\) \\
+\midrule
+\(\{\word{1234}\}\) & \(\word{1234}\) & all six relations of the chain \(1<2<3<4\) & \((1,1,1)\) \\
+\(\Sfour\) & all 24 one-line words & \(\varnothing\) & \((4,6,4)\) \\
+N-poset row & \(\word{1234},\word{1243},\word{2134},\word{2143},\word{2413}\) & \(1<3,\ 2<3,\ 2<4\) & \((2,2,2)\) \\
+\(\Dfour\) row & \(\word{1234},\word{1324},\word{2143},\word{2413}\), \(\word{3142},\word{3412},\word{4231},\word{4321}\) & \(\varnothing\) & \((4,4,4)\) \\
+\(\Vfour\) row & \(\word{1234},\word{2143},\word{3412},\word{4321}\) & \(\varnothing\) & \((4,2,4)\) \\
+\bottomrule
+\end{tabular}
+\caption{Explicit witness data used by the selected comparison. The common-precedence column is the finite relation whose linear extensions give the closure size in \cref{tab:appendix-selected-witness-status}.}
+\label{tab:appendix-selected-witness-data}
+\end{table}
+
+The overlap rows show that the poset-cone and subgroup-row fields are not disjoint. The N-poset row gives an exact poset cone that is not a subgroup row. The \(\Dfour\) and \(\Vfour\) rows give subgroup rows whose common-precedence closure is all of \(\Sfour\), hence they are not exact poset cones. The induced coset entries for subgroup rows are finite group bookkeeping. These five rows are exactly the witness set used in \cref{prop:selected-structural-comparison}.
+
+The full selected data package and the structural comparison replay file contain additional rows and diagnostic fields. Those additional records are not promoted here: this appendix records only the finite witnesses needed for the stated separation result.

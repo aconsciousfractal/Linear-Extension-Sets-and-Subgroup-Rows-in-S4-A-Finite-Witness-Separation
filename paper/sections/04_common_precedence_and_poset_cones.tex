@@ -1,0 +1,59 @@
+\section{Common Precedence and Poset Cones}
+\label{sec:common-precedence}
+
+We use standard terminology for finite posets and linear extensions; see \cite{Stanley2012EC1,Trotter1992}. The common-precedence criterion is proved directly in the finite setting used here.
+
+\begin{definition}[Common precedence]
+\label{def:common-precedence}
+Let \(\emptyset\ne X\subseteq\Sfour\). For distinct \(a,b\in[4]\), write \(a\,R_X\,b\) if \(a\) precedes \(b\) in every one-line word of \(X\). Let \(P_X\) be the transitive closure of \(R_X\), considered as a relation on \([4]\). After \cref{lem:common-precedence-poset}, define
+\[
+  \clposet(X)=\Lin(P_X),
+\]
+where \(\Lin(P)\) denotes the set of linear extensions of the strict poset \(P\) written as one-line words.
+\end{definition}
+
+\begin{lemma}[Common-precedence closure is a strict poset]
+\label{lem:common-precedence-poset}
+For every nonempty \(X\subseteq\Sfour\), the relation \(P_X\) is a strict poset on \([4]\).
+\end{lemma}
+
+\begin{proof}
+By construction, \(P_X\) is transitive. It remains to prove that it is irreflexive. Choose any word \(\sigma\in X\). Every relation \(a\,R_X\,b\) is respected by the total order of the positions in \(\sigma\): the position of \(a\) in \(\sigma\) is smaller than the position of \(b\). Hence every chain in the transitive closure of \(R_X\) is also strictly increasing in the position order of \(\sigma\). A relation \(a<_{P_X}a\) would therefore force the position of \(a\) in \(\sigma\) to be strictly smaller than itself, impossible. Thus \(P_X\) is irreflexive and transitive, hence a strict poset.
+\end{proof}
+
+\begin{definition}[Exact poset cone]
+\label{def:exact-poset-cone}
+A subset \(X\subseteq\Sfour\) is an exact poset cone if there exists a strict poset \(P\) on \([4]\) such that \(X=\Lin(P)\).
+\end{definition}
+
+\begin{lemma}[Finite extension separation]
+\label{lem:finite-extension-separation}
+Let \(P\) be a finite strict poset and let \(a,b\) be incomparable in \(P\). Then \(P\) has a linear extension in which \(a\) precedes \(b\), and a linear extension in which \(b\) precedes \(a\).
+\end{lemma}
+
+\begin{proof}
+It is enough to prove the first assertion; the second is symmetric. Add the relation \(a<b\) to the strict relation of \(P\) and take the transitive closure. This does not create a cycle: such a cycle would contain a path from \(b\) to \(a\) already present in \(P\), contradicting the incomparability of \(a\) and \(b\). Thus the enlarged relation is again a finite strict poset. Every finite strict poset has a linear extension, for example by repeatedly choosing a minimal remaining element. Any linear extension of the enlarged poset is a linear extension of \(P\) in which \(a\) precedes \(b\). Repeating the same argument after adding \(b<a\) gives a linear extension in the reverse order.
+\end{proof}
+
+\begin{theorem}[Common-precedence exactness criterion]
+\label{prop:common-precedence-exactness}
+For every nonempty \(X\subseteq\Sfour\),
+\[
+  X\subseteq \Lin(P_X).
+\]
+Moreover, \(X\) is an exact poset cone if and only if
+\[
+  X=\clposet(X)=\Lin(P_X).
+\]
+\end{theorem}
+
+\begin{proof}
+By \cref{lem:common-precedence-poset}, \(P_X\) is a strict poset. If \(a\,R_X\,b\), then every word in \(X\) places \(a\) before \(b\). Hence every word in \(X\) respects every relation in \(R_X\). Since each word is linearly ordered, it also respects every relation obtained by transitive closure. Therefore every word of \(X\) is a linear extension of \(P_X\), and \(X\subseteq\Lin(P_X)\).
+
+Suppose first that \(X\) is an exact poset cone, say \(X=\Lin(P)\) for a strict poset \(P\) on \([4]\). If \(a<_P b\), then every linear extension of \(P\) places \(a\) before \(b\), so \(a\,R_X\,b\). Conversely, assume \(a\,R_X\,b\). The reverse relation \(b<_P a\) is impossible, since then every linear extension of \(P\) would place \(b\) before \(a\). If \(a\) and \(b\) were incomparable in \(P\), \cref{lem:finite-extension-separation} would give a linear extension of \(P\) in which \(b\) precedes \(a\), again contradicting \(a\,R_X\,b\). Thus \(a<_P b\). The common-precedence relation therefore recovers exactly the order relation of \(P\), up to transitive closure, and \(P_X=P\). Consequently
+\[
+  \clposet(X)=\Lin(P_X)=\Lin(P)=X.
+\]
+
+For the converse, if \(X=\clposet(X)=\Lin(P_X)\), then \(X\) is the set of linear extensions of the strict poset \(P_X\). This is exactly the definition of an exact poset cone.
+\end{proof}

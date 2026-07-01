@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Linear-Extension Sets and Subgroup Rows in S4: A Finite Witness Separation
+%% Author: Oleksiy Babanskyy
+%% Build: pdflatex, bibtex, pdflatex, pdflatex.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,a4paper]{article}
+\pdfinfoomitdate=1
+\pdfsuppressptexinfo=-1
+\pdftrailerid{}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{aliascnt}
+\usepackage{booktabs,array,enumitem,geometry,longtable}
+\usepackage{placeins}
+\geometry{margin=2.5cm}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,capitalise]{cleveref}
+\Urlmuskip=0mu plus 2mu\relax
+\setlength{\emergencystretch}{3em}
+
+\input{macros}
+
+\hypersetup{
+  pdftitle={Linear-Extension Sets and Subgroup Rows in S4: A Finite Witness Separation},
+  pdfauthor={Oleksiy Babanskyy},
+  pdfsubject={finite S4 combinatorics, linear extensions, poset cones, subgroup rows},
+  pdfkeywords={symmetric group, posets, linear extensions, prefix flags, finite certificates}
+}
+
+\title{Linear-Extension Sets and Subgroup Rows in \texorpdfstring{$S_4$}{S4}:\\ A Finite Witness Separation}
+\author{Oleksiy Babanskyy}
+\date{}
+
+\begin{document}
+\pagestyle{plain}
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\smallskip
+\noindent\textbf{Keywords:} finite symmetric groups; linear extensions; poset cones; subgroup rows; prefix flags; finite certificates.
+
+\input{sections/01_introduction}
+\input{sections/02_s4_indexing_and_prefix_support}
+\input{sections/03_selected_s4_atlas}
+\input{sections/04_common_precedence_and_poset_cones}
+\input{sections/05_d4_v4_coset_rows}
+\input{sections/06_n_poset_boundary_example}
+\input{sections/07_selected_structural_comparison}
+\input{sections/08_boundaries_and_nonclaims}
+\input{sections/09_related_work}
+\input{sections/10_conclusion}
+
+\appendix
+\input{appendices/A_replay_and_schema}
+\input{appendices/B_selected_witness_tables}
+
+\section*{Data and Code Availability}
+The public source and reproducibility repository for this release is \url{https://github.com/aconsciousfractal/Linear-Extension-Sets-and-Subgroup-Rows-in-S4-A-Finite-Witness-Separation}. The repository contains the LaTeX source, compiled PDF, finite artifacts, certificates, replay scripts, MIT license, citation metadata, and SHA-256 manifests. Each computational statement used in the paper is tied to a finite artifact named in Appendix~\ref{app:replay-schema}.
+
+\bibliographystyle{alpha}
+\bibliography{references}
+
+\end{document}

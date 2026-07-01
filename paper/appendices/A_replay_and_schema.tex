@@ -1,0 +1,133 @@
+\section{Replay Boundary and Data Schema}
+\label{app:replay-schema}
+
+This appendix records the replay boundary for the finite statements used in the paper. All file paths displayed in this appendix are relative to the public repository root. The replay package is evidence for finite enumeration and consistency checks; it is not a substitute for the proofs in the body of the paper.
+
+\subsection{Replay Commands}
+\label{app:replay-command}
+
+The read-only replay pass for reviewers is:
+\begin{verbatim}
+python scripts/replay_all.py --verify
+\end{verbatim}
+The command verifies certificate status for the packaged finite artifacts, checks the SHA-256 manifest \path{certified/replay_hashes.sha256}, and runs package certification in read-only check mode. It does not rewrite the replay hash manifest, the package manifest, or release certification. It also does not regenerate the selected \(\Sfour\) data package; the packaged certificates are fixed finite provenance for this repository.
+
+The maintainer refresh command is:
+\begin{verbatim}
+python scripts/replay_all.py --update-manifest
+\end{verbatim}
+This command rewrites \path{certified/replay_hashes.sha256} and refreshes package certification after intentional source, artifact, table, or certificate changes.
+\subsection{Reviewer Environment and Expected Output}
+\label{app:reviewer-environment}
+
+The replay scripts use the Python standard library. The test suite uses \texttt{pytest}, as listed in \path{requirements.txt}. A reviewer can install the optional test dependency with:
+\begin{verbatim}
+python -m pip install -r requirements.txt
+\end{verbatim}
+The expected read-only replay summary is a JSON object with fields \verb|"status": "passed"|, \verb|"mode": "verify"|, \verb|"package_certification_mode": "check"|, and a package-checker summary reporting zero failed checks. The expected public test summary is:
+\begin{verbatim}
+4 passed
+\end{verbatim}
+A release build should be made only after the last maintainer refresh and read-only replay pass.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{0.31\textwidth}p{0.31\textwidth}p{0.25\textwidth}@{}}
+\toprule
+Repository path & Supports & Main finite checks \\
+\midrule
+\path{scripts/replay_all.py} & replay driver & certificate-status check, hash-manifest verification or refresh, package certification; driver file is hash-covered \\
+\path{results/s4_bridge_table.json} & \cref{thm:s4-indexing-bridge} & 24 words, 24 flags, 24 permutation-matrix supports \\
+\path{certified/s4_bridge_table_certificate.json} & bridge regression certificate & inverse checks and boundary checks all passed \\
+\path{results/s4_selected_atlas.json} & selected data source & row schema, row families, selected finite records \\
+\path{certified/s4_selected_atlas_expected_counts.yaml} & \cref{prop:selected-atlas-count,prop:poset-cone-distinct-count,prop:exact-artifact-row-count,prop:s4-subgroup-count} & 226 selected rows, 219 distinct poset-cone subsets, 221 exact artifact rows, 30 subgroups \\
+\path{certified/s4_selected_atlas_row_certificate.json} & selected row checks & row-level finite invariant checks \\
+\path{certified/s4_selected_atlas_independent_certificate.json} & independent finite replay & independent finite replay checks passed \\
+\path{certified/s4_d4_v4_rows_certificate.json} & \cref{cor:d4-v4-not-poset-cones,cor:d4-v4-subgroup-cosets} & fixed \(\Dfour\) and \(\Vfour\) rows, closure sizes, subgroup checks, induced coset counts \\
+\path{results/s4_structural_comparison.json} & \cref{prop:selected-structural-comparison} & 8 comparison artifact records: 5 proof witnesses, 1 summary, 2 deferred records \\
+\path{results/s4_structural_comparison.csv} & tabular replay extract & spreadsheet-readable comparison artifact records \\
+\path{tables/s4_selected_witness_comparison.md} & appendix/table source extract & 5 displayed proof-witness rows \\
+\path{certified/s4_structural_comparison_certificate.json} & selected comparison certificate & 34 checks passed, selected-row boundary enforced \\
+\path{certified/replay_hashes.sha256} & package integrity & manifest for the replay driver and packaged artifacts; the manifest is not self-hashed \\
+\bottomrule
+\end{tabular}
+\caption{Replay paths for the finite claims used in the paper. The paths are part of the replay boundary: renaming or replacing a hash-covered artifact requires the maintainer refresh command and a new verification pass.}
+\label{tab:replay-artifacts}
+\end{table}
+
+\subsection{Finite Values Checked by Replay}
+\label{app:finite-values-checked}
+
+The replay package checks the following finite values used in the paper.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{0.52\textwidth}r p{0.25\textwidth}@{}}
+\toprule
+Quantity & Value & Used in \\
+\midrule
+One-line words in \(\Sfour\) & 24 & \cref{sec:s4-indexing} \\
+Local prefix flags & 24 & \cref{thm:s4-indexing-bridge} \\
+Permutation-matrix supports & 24 & \cref{thm:s4-indexing-bridge} \\
+Selected artifact rows & 226 & \cref{prop:selected-atlas-count} \\
+Strict labeled posets on \([4]\) & 219 & \cref{prop:poset-cone-distinct-count} \\
+Distinct poset-cone subsets of \(\Sfour\) & 219 & \cref{prop:poset-cone-distinct-count} \\
+Exact poset-cone artifact rows & 221 & \cref{prop:exact-artifact-row-count} \\
+Subgroups of \(\Sfour\) under the locked convention & 30 & \cref{prop:s4-subgroup-count} \\
+Fixed \(\Dfour\) row size & 8 & \cref{sec:d4-v4} \\
+Fixed \(\Dfour\) common-precedence closure size & 24 & \cref{cor:d4-v4-not-poset-cones} \\
+Fixed \(\Dfour\) left and right coset counts & 3 and 3 & \cref{cor:d4-v4-subgroup-cosets} \\
+Fixed \(\Vfour\) row size & 4 & \cref{sec:d4-v4} \\
+Fixed \(\Vfour\) common-precedence closure size & 24 & \cref{cor:d4-v4-not-poset-cones} \\
+Fixed \(\Vfour\) left and right coset counts & 6 and 6 & \cref{cor:d4-v4-subgroup-cosets} \\
+Comparison artifact records & 8 & \cref{prop:selected-structural-comparison} \\
+Displayed comparison proof witnesses & 5 & \cref{prop:selected-structural-comparison,tab:selected-witnesses} \\
+\bottomrule
+\end{tabular}
+\caption{Finite values checked by the replay package. The comparison artifact contains eight records: five displayed proof witnesses, one summary record, and two deferred records. Only the five displayed witnesses support the stated non-equivalence result.}
+\label{tab:finite-values-checked}
+\end{table}
+
+\subsection{Data Field Roles}
+\label{app:atlas-field-roles}
+
+The selected data package records more data than the paper promotes to theorems. The field roles are separated as follows.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{0.22\textwidth}p{0.40\textwidth}p{0.25\textwidth}@{}}
+\toprule
+Field role & Typical fields & Allowed use in this paper \\
+\midrule
+Definition-bearing & labels, word notation, group convention, row identifier, family, size, explicit one-line words & define finite objects and conventions \\
+Theorem-bearing & prefix counts, prefix-support vector, exact poset-cone status, common-precedence relations, closure size, subgroup status, induced coset counts, certified summary counts & support the stated lemmas, theorems, propositions, and corollaries after replay \\
+Diagnostic & ordered/set prefix comparison, chamber-graph connectedness, exact-cover flags beyond subgroup wording, stabilizers, normalizers, component sizes & may be displayed as recorded finite data, but not as classification results \\
+Deferred & deferred profiles and annotations for geometric, square, mask, or larger-family questions & not used as evidence for any theorem in this paper \\
+\bottomrule
+\end{tabular}
+\caption{Paper-facing data field roles. The replay package may record diagnostic or deferred fields, but the body of the paper uses only the declared theorem-bearing fields.}
+\label{tab:atlas-schema-roles-appendix}
+\end{table}
+
+Batch rows require a separate convention. The selected data package includes batch records for subgroup and coset families. Such rows may support finite summary counts or appendix data, but they are not themselves ordinary subsets \(X\subseteq\Sfour\). Poset-cone statements in the paper apply to ordinary subset rows unless a result explicitly says otherwise.
+
+\subsection{Hash Policy}
+\label{app:hash-policy}
+
+The integrity policy is SHA-256 over the exact bytes of the replay driver and each packaged data, certificate, and table artifact listed in \cref{tab:replay-artifacts}. The hash manifest itself records those digests but is not self-hashed. The manifest format is
+\begin{verbatim}
+<sha256-hex>  <repository-relative-path>
+\end{verbatim}
+with one line per hash-covered artifact. A paper build is considered tied to the replay package only when:
+\begin{enumerate}[label=(\roman*)]
+\item the reviewer command \verb|python scripts/replay_all.py --verify| exits successfully;
+\item every hash-covered artifact in \cref{tab:replay-artifacts}, excluding \path{certified/replay_hashes.sha256} itself, appears in \path{certified/replay_hashes.sha256};
+\item every hash-covered artifact has the digest recorded in \path{certified/replay_hashes.sha256};
+\item every JSON certificate named in \cref{tab:replay-artifacts} has status \texttt{passed} where that status field is present;
+\item package certification passes in read-only check mode;
+\item the TeX build is run after the last maintainer refresh.
+\end{enumerate}
+If any data file, certificate, table, or replay script changes, the maintainer refresh command and TeX build must be rerun, followed by the read-only verification command. The paper statements are then read against the refreshed hash manifest, not against an earlier generated package.

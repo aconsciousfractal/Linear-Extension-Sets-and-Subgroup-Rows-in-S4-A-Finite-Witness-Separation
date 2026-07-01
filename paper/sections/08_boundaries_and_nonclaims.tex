@@ -1,0 +1,36 @@
+\section{Boundaries and Nonclaims}
+\label{sec:boundaries}
+
+The results above are finite statements about one-line words in \(\Sfour\), their prefix flags, selected finite data rows, common-precedence poset closures, and subgroup-row witnesses. This section records the boundary of those statements in the same mathematical language, so that the finite conclusions are not read as stronger classification or realization theorems.
+
+\begin{proposition}[Boundary of the finite result]
+\label{prop:paper-boundary}
+The results in this paper do not assert or supply the missing hypotheses for any of the following stronger statements:
+\begin{enumerate}[label=(\alph*)]
+\item a classification of all \(2^{24}\) subsets of \(\Sfour\);
+\item a classification of all exact-cover, translate-cover, or tiler behavior in \(\Sfour\);
+\item a geometric realization or geometric transitivity theorem;
+\item a theorem about special Magic-24, square, or mask structures;
+\item a general theorem for \(\Sn\) with arbitrary \(n\);
+\item a synthesis theorem identifying all structural fields carried by the same \(\Sfour\) labels;
+\item a statement that the indexing bridge preserves every structural field placed on subsets of \(\Sfour\);
+\item an independent theorem separating subgroup-row status from subgroup-coset partition status.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The indexing bridge of \cref{thm:s4-indexing-bridge} is a bijection among three finite label models: one-line words, local prefix flags, and permutation-matrix supports. A bijection of labels does not by itself define geometric incidence, magic-square constraints, tiler data, or a general \(\Sn\) construction. Those structures require additional objects and additional compatibility conditions that are not part of the hypotheses of the theorem.
+
+The selected-data statements in \cref{sec:selected-atlas} count a selected finite artifact. They distinguish 226 selected artifact rows, 219 distinct poset-cone subsets, and 221 exact poset-cone artifact rows. Since \(|\Sfour|=24\), the full power set has \(2^{24}\) subsets. No result above enumerates or classifies that full power set, and no result above gives an implication table for every possible subset of \(\Sfour\).
+
+The common-precedence criterion of \cref{prop:common-precedence-exactness} detects when a nonempty subset \(X\subseteq\Sfour\) is exactly the set of linear extensions of its common-precedence poset. This is a poset-cone test. It is not an exact-cover classification, a tiler classification, or a geometric realization theorem.
+
+The subgroup statements for \(\Dfour\) and \(\Vfour\) in \cref{sec:d4-v4} are finite group statements under the stated composition convention. They prove that the fixed rows are subgroup rows with the standard induced left and right coset partitions, and also that they are not exact poset cones. They do not turn coset partition bookkeeping into geometric transitivity, nor do they classify all possible subgroup embeddings or all translate covers.
+
+Finally, \cref{prop:selected-structural-comparison} is a selected-witness proposition. Its witnesses show that exact poset-cone status is not equivalent to subgroup-row status on the displayed rows. The proposition deliberately does not upgrade the selected witness table into a full classification theorem. Therefore none of the stronger statements listed in the proposition follows from the results proved in this paper.
+\end{proof}
+
+\begin{remark}[How to read the certificates]
+\label{rem:certificate-boundary}
+The certificates support finite replay claims inside their declared boundaries: row counts, fixed word lists, finite closure sizes, subgroup checks, induced coset counts, and selected-witness comparisons. They should not be read as hidden proofs of broader structural classification, geometric realization, Magic-24, or general \(\Sn\) statements.
+\end{remark}

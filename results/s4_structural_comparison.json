@@ -1,0 +1,493 @@
+{
+  "claim_id": "S4LAYER-PROP-006",
+  "project": "s4_layer_public_package",
+  "public_claim_boundary": {
+    "not_claimed": [
+      "classification of all S4 subsets",
+      "classification of all exact covers or tilers",
+      "geometric transitivity",
+      "Magic 24 theorem",
+      "Duerer/Sagrada theorem",
+      "general S_n theorem",
+      "all D4 embeddings in S4"
+    ],
+    "positive": "reader-facing comparison of selected public S4 rows; deferred candidates recorded separately"
+  },
+  "rows": [
+    {
+      "claim_status": "S4LAYER-THM-003 artifact support; S4LAYER-PROP-006 table support",
+      "closure_size": "equals row size for exact rows",
+      "common_precedence_relations": "varies",
+      "common_precedence_relations_count": "varies",
+      "connected_chamber_graph": "all exact artifact rows connected",
+      "elements_one_line": [],
+      "exact_cover_status": "mixed",
+      "exact_poset_cone": true,
+      "left_coset_count": "mixed",
+      "left_coset_status": "mixed",
+      "left_stabilizer_size": "mixed",
+      "left_translate_tiler": "mixed",
+      "normalizer_size": "mixed",
+      "s4layer_interpretation": "poset-cone status is a separate field; it overlaps with but does not equal subgroup-row status, while coset entries are induced subgroup bookkeeping",
+      "poset_status": "exact_poset_cone_layer",
+      "pref_ord_counts_r1_to_r4": "varies",
+      "pref_set_counts_r1_to_r4": "varies",
+      "prefix_support_vector_A3": "varies",
+      "right_coset_count": "mixed",
+      "right_coset_status": "mixed",
+      "right_stabilizer_size": "mixed",
+      "right_translate_tiler": "mixed",
+      "row_id": "poset_cone_layer_summary",
+      "row_kind": "summary",
+      "row_name": "selected-atlas exact poset-cone layer summary",
+      "size": "varies",
+      "source": "selected data summary",
+      "subgroup_coset_partition": "mixed",
+      "subgroup_order_profile": "mixed",
+      "subgroup_row": "mixed",
+      "subgroup_size": "mixed",
+      "subgroup_status": "mixed",
+      "summary_counts": {
+        "distinct_poset_cone_subsets": 219,
+        "exact_poset_cone_artifact_rows": 221,
+        "exact_poset_cone_artifact_rows_recomputed": 221,
+        "exact_poset_cone_connected_rows": 221,
+        "exact_poset_cone_rows_that_are_subgroups": 10,
+        "exact_poset_cone_rows_with_left_right_translate_exact_cover_status": 77,
+        "selected_artifact_rows": 226,
+        "strict_labeled_posets_on_4": 219
+      },
+      "translate_exact_cover_status": "mixed"
+    },
+    {
+      "claim_status": "selected-atlas support; comparison support",
+      "closure_size": 1,
+      "common_precedence_relations": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "common_precedence_relations_count": 6,
+      "connected_chamber_graph": true,
+      "elements_one_line": [
+        "1234"
+      ],
+      "exact_cover_status": "left_and_right_translate_tiler_via_cosets",
+      "exact_poset_cone": true,
+      "left_coset_count": 24,
+      "left_coset_status": "verified_left_coset",
+      "left_stabilizer_size": 1,
+      "left_translate_tiler": true,
+      "normalizer_size": 24,
+      "s4layer_interpretation": "overlap control: a singleton is both an exact poset cone and a locked subgroup coset partition",
+      "poset_status": "exact_poset_cone",
+      "pref_ord_counts_r1_to_r4": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "pref_set_counts_r1_to_r4": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "prefix_support_vector_A3": [
+        1,
+        1,
+        1
+      ],
+      "right_coset_count": 24,
+      "right_coset_status": "verified_right_coset",
+      "right_stabilizer_size": 1,
+      "right_translate_tiler": true,
+      "row_id": "singleton_1234",
+      "row_kind": "edge_case",
+      "row_name": "Singleton chamber (1,2,3,4)",
+      "size": 1,
+      "source": "selected atlas row",
+      "subgroup_coset_partition": "left_and_right_subgroup_coset_partition",
+      "subgroup_order_profile": {
+        "1": 1
+      },
+      "subgroup_row": true,
+      "subgroup_size": 1,
+      "subgroup_status": "verified_subgroup",
+      "translate_exact_cover_status": "left_and_right_translate_tiler_via_cosets"
+    },
+    {
+      "claim_status": "selected-atlas support; comparison support",
+      "closure_size": 24,
+      "common_precedence_relations": [],
+      "common_precedence_relations_count": 0,
+      "connected_chamber_graph": true,
+      "elements_one_line": [
+        "1234",
+        "1243",
+        "1324",
+        "1342",
+        "1423",
+        "1432",
+        "2134",
+        "2143",
+        "2314",
+        "2341",
+        "2413",
+        "2431",
+        "3124",
+        "3142",
+        "3214",
+        "3241",
+        "3412",
+        "3421",
+        "4123",
+        "4132",
+        "4213",
+        "4231",
+        "4312",
+        "4321"
+      ],
+      "exact_cover_status": "left_and_right_translate_tiler_via_cosets",
+      "exact_poset_cone": true,
+      "left_coset_count": 1,
+      "left_coset_status": "verified_left_coset",
+      "left_stabilizer_size": 24,
+      "left_translate_tiler": true,
+      "normalizer_size": 24,
+      "s4layer_interpretation": "overlap control: the whole group is both an exact poset cone and a locked subgroup coset partition",
+      "poset_status": "exact_poset_cone",
+      "pref_ord_counts_r1_to_r4": [
+        4,
+        12,
+        24,
+        24
+      ],
+      "pref_set_counts_r1_to_r4": [
+        4,
+        6,
+        4,
+        1
+      ],
+      "prefix_support_vector_A3": [
+        4,
+        6,
+        4
+      ],
+      "right_coset_count": 1,
+      "right_coset_status": "verified_right_coset",
+      "right_stabilizer_size": 24,
+      "right_translate_tiler": true,
+      "row_id": "full_s4",
+      "row_kind": "full_group",
+      "row_name": "Full S4",
+      "size": 24,
+      "source": "selected atlas row",
+      "subgroup_coset_partition": "left_and_right_subgroup_coset_partition",
+      "subgroup_order_profile": {
+        "1": 1,
+        "2": 9,
+        "3": 8,
+        "4": 6
+      },
+      "subgroup_row": true,
+      "subgroup_size": 24,
+      "subgroup_status": "verified_subgroup",
+      "translate_exact_cover_status": "left_and_right_translate_tiler_via_cosets"
+    },
+    {
+      "claim_status": "S4ATLAS-EX-N-001 import; comparison support",
+      "closure_size": 5,
+      "common_precedence_relations": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "common_precedence_relations_count": 3,
+      "connected_chamber_graph": true,
+      "elements_one_line": [
+        "1234",
+        "1243",
+        "2134",
+        "2143",
+        "2413"
+      ],
+      "exact_cover_status": "not_tested_beyond_coset_criterion",
+      "exact_poset_cone": true,
+      "left_coset_count": "n/a",
+      "left_coset_status": "not_left_coset",
+      "left_stabilizer_size": 1,
+      "left_translate_tiler": false,
+      "normalizer_size": "not_applicable_not_subgroup",
+      "s4layer_interpretation": "separation control: exact poset cone but not a subgroup row",
+      "poset_status": "exact_poset_cone",
+      "pref_ord_counts_r1_to_r4": [
+        2,
+        3,
+        5,
+        5
+      ],
+      "pref_set_counts_r1_to_r4": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "prefix_support_vector_A3": [
+        2,
+        2,
+        2
+      ],
+      "right_coset_count": "n/a",
+      "right_coset_status": "not_right_coset",
+      "right_stabilizer_size": 1,
+      "right_translate_tiler": false,
+      "row_id": "poset_cone_N_boundary",
+      "row_kind": "n_poset_boundary",
+      "row_name": "N-poset boundary cone",
+      "size": 5,
+      "source": "selected atlas row",
+      "subgroup_coset_partition": "not_subgroup_row",
+      "subgroup_order_profile": "n/a",
+      "subgroup_row": false,
+      "subgroup_size": "n/a",
+      "subgroup_status": "not_subgroup",
+      "translate_exact_cover_status": "not_tested_beyond_coset_criterion"
+    },
+    {
+      "claim_status": "S4LAYER-THM-004/005 artifact supports; comparison support",
+      "closure_size": 24,
+      "common_precedence_relations": [],
+      "common_precedence_relations_count": 0,
+      "connected_chamber_graph": false,
+      "elements_one_line": [
+        "1234",
+        "1324",
+        "2143",
+        "2413",
+        "3142",
+        "3412",
+        "4231",
+        "4321"
+      ],
+      "exact_cover_status": "left_and_right_translate_tiler_via_cosets",
+      "exact_poset_cone": false,
+      "left_coset_count": 3,
+      "left_coset_status": "verified_left_coset",
+      "left_stabilizer_size": 8,
+      "left_translate_tiler": true,
+      "normalizer_size": 8,
+      "s4layer_interpretation": "main separation row: locked S4ATLAS subgroup row with left/right subgroup coset partitions but not exact poset cone",
+      "poset_status": "not_exact_poset_cone",
+      "pref_ord_counts_r1_to_r4": [
+        4,
+        8,
+        8,
+        8
+      ],
+      "pref_set_counts_r1_to_r4": [
+        4,
+        4,
+        4,
+        1
+      ],
+      "prefix_support_vector_A3": [
+        4,
+        4,
+        4
+      ],
+      "right_coset_count": 3,
+      "right_coset_status": "verified_right_coset",
+      "right_stabilizer_size": 8,
+      "right_translate_tiler": true,
+      "row_id": "d4_candidate",
+      "row_kind": "subgroup",
+      "row_name": "locked selected-atlas D4 row",
+      "size": 8,
+      "source": "selected atlas row",
+      "subgroup_coset_partition": "left_and_right_subgroup_coset_partition",
+      "subgroup_order_profile": {
+        "1": 1,
+        "2": 5,
+        "4": 2
+      },
+      "subgroup_row": true,
+      "subgroup_size": 8,
+      "subgroup_status": "verified_subgroup",
+      "translate_exact_cover_status": "left_and_right_translate_tiler_via_cosets"
+    },
+    {
+      "claim_status": "S4LAYER-THM-004/005 artifact supports; comparison support",
+      "closure_size": 24,
+      "common_precedence_relations": [],
+      "common_precedence_relations_count": 0,
+      "connected_chamber_graph": false,
+      "elements_one_line": [
+        "1234",
+        "2143",
+        "3412",
+        "4321"
+      ],
+      "exact_cover_status": "left_and_right_translate_tiler_via_cosets",
+      "exact_poset_cone": false,
+      "left_coset_count": 6,
+      "left_coset_status": "verified_left_coset",
+      "left_stabilizer_size": 4,
+      "left_translate_tiler": true,
+      "normalizer_size": 24,
+      "s4layer_interpretation": "main separation row: locked S4ATLAS subgroup row with left/right subgroup coset partitions but not exact poset cone",
+      "poset_status": "not_exact_poset_cone",
+      "pref_ord_counts_r1_to_r4": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "pref_set_counts_r1_to_r4": [
+        4,
+        2,
+        4,
+        1
+      ],
+      "prefix_support_vector_A3": [
+        4,
+        2,
+        4
+      ],
+      "right_coset_count": 6,
+      "right_coset_status": "verified_right_coset",
+      "right_stabilizer_size": 4,
+      "right_translate_tiler": true,
+      "row_id": "v4_candidate",
+      "row_kind": "subgroup",
+      "row_name": "locked selected-atlas V4 row",
+      "size": 4,
+      "source": "selected atlas row",
+      "subgroup_coset_partition": "left_and_right_subgroup_coset_partition",
+      "subgroup_order_profile": {
+        "1": 1,
+        "2": 3
+      },
+      "subgroup_row": true,
+      "subgroup_size": 4,
+      "subgroup_status": "verified_subgroup",
+      "translate_exact_cover_status": "left_and_right_translate_tiler_via_cosets"
+    },
+    {
+      "claim_status": "not used as theorem support in this comparison artifact",
+      "closure_size": "deferred",
+      "common_precedence_relations": "deferred",
+      "common_precedence_relations_count": "deferred",
+      "connected_chamber_graph": "deferred",
+      "elements_one_line": [],
+      "exact_cover_status": "deferred",
+      "exact_poset_cone": "deferred",
+      "left_coset_count": "deferred",
+      "left_coset_status": "deferred",
+      "left_stabilizer_size": "deferred",
+      "left_translate_tiler": "deferred",
+      "normalizer_size": "deferred",
+      "s4layer_interpretation": "deferred: this comparison artifact cannot use these as theorem support without source lock",
+      "poset_status": "deferred_source_lock_required",
+      "pref_ord_counts_r1_to_r4": "deferred",
+      "pref_set_counts_r1_to_r4": "deferred",
+      "prefix_support_vector_A3": "deferred",
+      "right_coset_count": "deferred",
+      "right_coset_status": "deferred",
+      "right_stabilizer_size": "deferred",
+      "right_translate_tiler": "deferred",
+      "row_id": "magic_duerer_sagrada_beyond_d4_v4",
+      "row_kind": "deferred_source_candidate",
+      "row_name": "Magic/Duerer/Sagrada rows beyond locked D4/V4",
+      "size": "deferred",
+      "source": "candidate source only",
+      "subgroup_coset_partition": "deferred",
+      "subgroup_order_profile": "deferred",
+      "subgroup_row": "deferred",
+      "subgroup_size": "deferred",
+      "subgroup_status": "deferred",
+      "translate_exact_cover_status": "deferred"
+    },
+    {
+      "claim_status": "not used as theorem support in this comparison artifact",
+      "closure_size": "deferred",
+      "common_precedence_relations": "deferred",
+      "common_precedence_relations_count": "deferred",
+      "connected_chamber_graph": "deferred",
+      "elements_one_line": [],
+      "exact_cover_status": "deferred",
+      "exact_poset_cone": "deferred",
+      "left_coset_count": "deferred",
+      "left_coset_status": "deferred",
+      "left_stabilizer_size": "deferred",
+      "left_translate_tiler": "deferred",
+      "normalizer_size": "deferred",
+      "s4layer_interpretation": "deferred: useful for later context but not proof input for this table",
+      "poset_status": "deferred_source_lock_required",
+      "pref_ord_counts_r1_to_r4": "deferred",
+      "pref_set_counts_r1_to_r4": "deferred",
+      "prefix_support_vector_A3": "deferred",
+      "right_coset_count": "deferred",
+      "right_coset_status": "deferred",
+      "right_stabilizer_size": "deferred",
+      "right_translate_tiler": "deferred",
+      "row_id": "tetra_coxeter_pure_type_data",
+      "row_kind": "deferred_source_candidate",
+      "row_name": "Tetra/Coxeter-pure type data",
+      "size": "deferred",
+      "source": "candidate source only",
+      "subgroup_coset_partition": "deferred",
+      "subgroup_order_profile": "deferred",
+      "subgroup_row": "deferred",
+      "subgroup_size": "deferred",
+      "subgroup_status": "deferred",
+      "translate_exact_cover_status": "deferred"
+    }
+  ],
+  "schema": "s4layer.s4layer.poset_d4_v4_comparison.v0.1",
+  "source_artifacts": [
+    "results/s4_selected_atlas.json",
+    "certified/s4_selected_atlas_row_certificate.json",
+    "certified/s4_selected_atlas_independent_certificate.json",
+    "certified/s4_d4_v4_rows_certificate.json"
+  ],
+  "source_status": {
+    "s4atlas_independent_certificate": "passed",
+    "s4atlas_independent_certificate_failed": 0,
+    "s4atlas_row_certificate": "passed",
+    "s4atlas_row_certificate_failed": 0,
+    "s4layer_d4_v4_import_certificate": "passed",
+    "s4layer_d4_v4_import_certificate_failed": 0
+  },
+  "status": "generated_local_artifact_not_public_theorem"
+}

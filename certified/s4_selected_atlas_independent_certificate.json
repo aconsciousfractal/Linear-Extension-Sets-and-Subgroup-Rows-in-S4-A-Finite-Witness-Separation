@@ -1,0 +1,660 @@
+{
+  "atlas_schema": "s4layer.s4atlas.s4_structured_subsets_atlas.v0.2",
+  "certification_scope": "independent finite checker for selected-atlas finite computational propositions; not theorem-bearing by itself",
+  "checks": [
+    {
+      "actual": "s4layer.s4atlas.s4_structured_subsets_atlas.v0.2",
+      "detail": "",
+      "expected": "s4layer.s4atlas.s4_structured_subsets_atlas.v0.2",
+      "id": "atlas.schema",
+      "status": "pass"
+    },
+    {
+      "actual": "s4_selected_atlas",
+      "detail": "",
+      "expected": "s4_selected_atlas",
+      "id": "atlas.project",
+      "status": "pass"
+    },
+    {
+      "actual": 24,
+      "detail": "",
+      "expected": 24,
+      "id": "summary.s4_size",
+      "status": "pass"
+    },
+    {
+      "actual": 226,
+      "detail": "",
+      "expected": 226,
+      "id": "summary.num_rows",
+      "status": "pass"
+    },
+    {
+      "actual": 224,
+      "detail": "",
+      "expected": 224,
+      "id": "summary.num_core_rows",
+      "status": "pass"
+    },
+    {
+      "actual": 2,
+      "detail": "",
+      "expected": 2,
+      "id": "summary.num_d4_v4_rows",
+      "status": "pass"
+    },
+    {
+      "actual": 219,
+      "detail": "",
+      "expected": 219,
+      "id": "summary.num_labeled_posets_on_4",
+      "status": "pass"
+    },
+    {
+      "actual": 219,
+      "detail": "",
+      "expected": 219,
+      "id": "summary.num_poset_cones_distinct",
+      "status": "pass"
+    },
+    {
+      "actual": 30,
+      "detail": "",
+      "expected": 30,
+      "id": "summary.num_subgroups",
+      "status": "pass"
+    },
+    {
+      "actual": 0,
+      "detail": "",
+      "expected": 0,
+      "id": "summary.num_blocked_rows",
+      "status": "pass"
+    },
+    {
+      "actual": 221,
+      "detail": "",
+      "expected": 221,
+      "id": "summary.num_rows_connected",
+      "status": "pass"
+    },
+    {
+      "actual": 221,
+      "detail": "",
+      "expected": 221,
+      "id": "summary.num_rows_exact_poset_cone",
+      "status": "pass"
+    },
+    {
+      "actual": 79,
+      "detail": "",
+      "expected": 79,
+      "id": "summary.num_rows_subgroup_or_coset",
+      "status": "pass"
+    },
+    {
+      "actual": 5,
+      "detail": "",
+      "expected": 5,
+      "id": "summary.n_poset_linear_extension_count",
+      "status": "pass"
+    },
+    {
+      "actual": 3,
+      "detail": "",
+      "expected": 3,
+      "id": "summary.d4_left_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 6,
+      "detail": "",
+      "expected": 6,
+      "id": "summary.v4_left_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 24,
+      "detail": "",
+      "expected": 24,
+      "id": "independent.s4_size",
+      "status": "pass"
+    },
+    {
+      "actual": 219,
+      "detail": "",
+      "expected": 219,
+      "id": "independent.num_labeled_posets_on_4",
+      "status": "pass"
+    },
+    {
+      "actual": 219,
+      "detail": "",
+      "expected": 219,
+      "id": "independent.num_poset_cones_distinct",
+      "status": "pass"
+    },
+    {
+      "actual": 30,
+      "detail": "",
+      "expected": 30,
+      "id": "independent.num_subgroups",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "1": 1,
+        "12": 1,
+        "2": 9,
+        "24": 1,
+        "3": 4,
+        "4": 7,
+        "6": 4,
+        "8": 3
+      },
+      "detail": "",
+      "expected": {
+        "1": 1,
+        "12": 1,
+        "2": 9,
+        "24": 1,
+        "3": 4,
+        "4": 7,
+        "6": 4,
+        "8": 3
+      },
+      "id": "independent.subgroup_size_distribution",
+      "status": "pass"
+    },
+    {
+      "actual": true,
+      "detail": "",
+      "expected": true,
+      "id": "independent.contains_locked_d4",
+      "status": "pass"
+    },
+    {
+      "actual": true,
+      "detail": "",
+      "expected": true,
+      "id": "independent.contains_locked_v4",
+      "status": "pass"
+    },
+    {
+      "actual": [
+        "1234",
+        "1324",
+        "2143",
+        "2413",
+        "3142",
+        "3412",
+        "4231",
+        "4321"
+      ],
+      "detail": "",
+      "expected": [
+        "1234",
+        "1324",
+        "2143",
+        "2413",
+        "3142",
+        "3412",
+        "4231",
+        "4321"
+      ],
+      "id": "d4_candidate.elements.expected",
+      "status": "pass"
+    },
+    {
+      "actual": [
+        "1234",
+        "1324",
+        "2143",
+        "2413",
+        "3142",
+        "3412",
+        "4231",
+        "4321"
+      ],
+      "detail": "",
+      "expected": [
+        "1234",
+        "1324",
+        "2143",
+        "2413",
+        "3142",
+        "3412",
+        "4231",
+        "4321"
+      ],
+      "id": "d4_candidate.elements.artifact",
+      "status": "pass"
+    },
+    {
+      "actual": 8,
+      "detail": "",
+      "expected": 8,
+      "id": "d4_candidate.size",
+      "status": "pass"
+    },
+    {
+      "actual": 8,
+      "detail": "",
+      "expected": 8,
+      "id": "d4_candidate.artifact_size",
+      "status": "pass"
+    },
+    {
+      "actual": true,
+      "detail": "",
+      "expected": true,
+      "id": "d4_candidate.is_subgroup",
+      "status": "pass"
+    },
+    {
+      "actual": "verified_subgroup",
+      "detail": "",
+      "expected": "verified_subgroup",
+      "id": "d4_candidate.artifact_subgroup_status",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "1": 1,
+        "2": 5,
+        "4": 2
+      },
+      "detail": "",
+      "expected": {
+        "1": 1,
+        "2": 5,
+        "4": 2
+      },
+      "id": "d4_candidate.order_profile",
+      "status": "pass"
+    },
+    {
+      "actual": 3,
+      "detail": "",
+      "expected": 3,
+      "id": "d4_candidate.left_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 3,
+      "detail": "",
+      "expected": 3,
+      "id": "d4_candidate.right_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 3,
+      "detail": "",
+      "expected": 3,
+      "id": "d4_candidate.artifact_left_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 3,
+      "detail": "",
+      "expected": 3,
+      "id": "d4_candidate.artifact_right_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 24,
+      "detail": "",
+      "expected": 24,
+      "id": "d4_candidate.halfspace_closure_size",
+      "status": "pass"
+    },
+    {
+      "actual": false,
+      "detail": "",
+      "expected": false,
+      "id": "d4_candidate.is_exact_poset_cone",
+      "status": "pass"
+    },
+    {
+      "actual": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "detail": "",
+      "expected": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "id": "d4_candidate.chamber_component_sizes",
+      "status": "pass"
+    },
+    {
+      "actual": [
+        "1234",
+        "2143",
+        "3412",
+        "4321"
+      ],
+      "detail": "",
+      "expected": [
+        "1234",
+        "2143",
+        "3412",
+        "4321"
+      ],
+      "id": "v4_candidate.elements.expected",
+      "status": "pass"
+    },
+    {
+      "actual": [
+        "1234",
+        "2143",
+        "3412",
+        "4321"
+      ],
+      "detail": "",
+      "expected": [
+        "1234",
+        "2143",
+        "3412",
+        "4321"
+      ],
+      "id": "v4_candidate.elements.artifact",
+      "status": "pass"
+    },
+    {
+      "actual": 4,
+      "detail": "",
+      "expected": 4,
+      "id": "v4_candidate.size",
+      "status": "pass"
+    },
+    {
+      "actual": 4,
+      "detail": "",
+      "expected": 4,
+      "id": "v4_candidate.artifact_size",
+      "status": "pass"
+    },
+    {
+      "actual": true,
+      "detail": "",
+      "expected": true,
+      "id": "v4_candidate.is_subgroup",
+      "status": "pass"
+    },
+    {
+      "actual": "verified_subgroup",
+      "detail": "",
+      "expected": "verified_subgroup",
+      "id": "v4_candidate.artifact_subgroup_status",
+      "status": "pass"
+    },
+    {
+      "actual": {
+        "1": 1,
+        "2": 3
+      },
+      "detail": "",
+      "expected": {
+        "1": 1,
+        "2": 3
+      },
+      "id": "v4_candidate.order_profile",
+      "status": "pass"
+    },
+    {
+      "actual": 6,
+      "detail": "",
+      "expected": 6,
+      "id": "v4_candidate.left_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 6,
+      "detail": "",
+      "expected": 6,
+      "id": "v4_candidate.right_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 6,
+      "detail": "",
+      "expected": 6,
+      "id": "v4_candidate.artifact_left_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 6,
+      "detail": "",
+      "expected": 6,
+      "id": "v4_candidate.artifact_right_coset_count",
+      "status": "pass"
+    },
+    {
+      "actual": 24,
+      "detail": "",
+      "expected": 24,
+      "id": "v4_candidate.halfspace_closure_size",
+      "status": "pass"
+    },
+    {
+      "actual": false,
+      "detail": "",
+      "expected": false,
+      "id": "v4_candidate.is_exact_poset_cone",
+      "status": "pass"
+    },
+    {
+      "actual": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "detail": "",
+      "expected": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "id": "v4_candidate.chamber_component_sizes",
+      "status": "pass"
+    },
+    {
+      "actual": 5,
+      "detail": "",
+      "expected": 5,
+      "id": "n_poset.linear_extension_count",
+      "status": "pass"
+    },
+    {
+      "actual": [
+        "1234",
+        "1243",
+        "2134",
+        "2143",
+        "2413"
+      ],
+      "detail": "",
+      "expected": [
+        "1234",
+        "1243",
+        "2134",
+        "2143",
+        "2413"
+      ],
+      "id": "n_poset.linear_extensions",
+      "status": "pass"
+    },
+    {
+      "actual": 5,
+      "detail": "",
+      "expected": 5,
+      "id": "n_poset.artifact_size",
+      "status": "pass"
+    },
+    {
+      "actual": true,
+      "detail": "",
+      "expected": true,
+      "id": "n_poset.artifact_exact_poset_cone",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": {
+    "does_not_make_public_safe": [
+      "D4/V4 theorem promotion",
+      "S4 classification",
+      "geometric transitivity",
+      "Magic 24 theorem import",
+      "general S_n theorem"
+    ],
+    "supports": [
+      "S4ATLAS-COMP-001 as independently checked local computation",
+      "S4ATLAS-COMP-002 as independently checked local computation",
+      "S4ATLAS-COMP-POSETS-001 as independently checked local computation",
+      "S4ATLAS-COMP-SUBGROUPS-001 as independently checked local computation"
+    ]
+  },
+  "computed": {
+    "contains_locked_d4": true,
+    "contains_locked_v4": true,
+    "d4": {
+      "chamber_component_sizes": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "elements_compact": [
+        "1234",
+        "1324",
+        "2143",
+        "2413",
+        "3142",
+        "3412",
+        "4231",
+        "4321"
+      ],
+      "halfspace_closure_size": 24,
+      "is_exact_poset_cone": false,
+      "is_subgroup": true,
+      "left_coset_count": 3,
+      "left_coset_sizes": [
+        8,
+        8,
+        8
+      ],
+      "order_profile": {
+        "1": 1,
+        "2": 5,
+        "4": 2
+      },
+      "right_coset_count": 3,
+      "right_coset_sizes": [
+        8,
+        8,
+        8
+      ],
+      "size": 8
+    },
+    "n_poset": {
+      "is_exact_poset_cone": true,
+      "linear_extension_count": 5,
+      "linear_extensions_compact": [
+        "1234",
+        "1243",
+        "2134",
+        "2143",
+        "2413"
+      ],
+      "relations": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "num_labeled_posets_on_4": 219,
+    "num_poset_cones_distinct": 219,
+    "num_subgroups": 30,
+    "s4_size": 24,
+    "subgroup_size_distribution": {
+      "1": 1,
+      "12": 1,
+      "2": 9,
+      "24": 1,
+      "3": 4,
+      "4": 7,
+      "6": 4,
+      "8": 3
+    },
+    "v4": {
+      "chamber_component_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "elements_compact": [
+        "1234",
+        "2143",
+        "3412",
+        "4321"
+      ],
+      "halfspace_closure_size": 24,
+      "is_exact_poset_cone": false,
+      "is_subgroup": true,
+      "left_coset_count": 6,
+      "left_coset_sizes": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "order_profile": {
+        "1": 1,
+        "2": 3
+      },
+      "right_coset_count": 6,
+      "right_coset_sizes": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "size": 4
+    }
+  },
+  "does_not_import_builder": true,
+  "failed_check_ids": [],
+  "hashes": {
+    "atlas": "D0A62DAB6D99BD8AE2C77F0E133E48583C8B1727C440FE4C60D5560080BF5C07",
+    "checker_script": "5CDA4D3C590DC531AAF7DE1D18993A332EF96DC2785BD17DC31F324823A00AF9",
+    "expected_counts": "55CB66CE5E66F1E31AB5E03DA9C00A6A7C963B139523169650222694953E0FEA"
+  },
+  "num_checks": 55,
+  "num_failed": 0,
+  "project": "s4_selected_atlas",
+  "schema": "s4layer.s4atlas.independent_certification.v0.1",
+  "status": "passed"
+}

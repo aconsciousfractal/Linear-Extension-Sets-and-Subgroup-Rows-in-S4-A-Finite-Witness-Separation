@@ -1,0 +1,2652 @@
+{
+  "claim_boundary": {
+    "not_claimed": [
+      "Magic 24 theorem",
+      "Sagrada theorem",
+      "Duerer theorem",
+      "geometric transitivity",
+      "classification of all subsets of S4",
+      "classification of all tilers or exact covers",
+      "general S_n theorem"
+    ],
+    "positive": "finite indexing bridge among one-line S4 words, local A3 flags, and 4x4 permutation-matrix supports"
+  },
+  "counts": {
+    "flag_chains": 24,
+    "labels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "permutation_diagonals": 24,
+    "s4_words": 24
+  },
+  "project": "s4_layer_public_package",
+  "rows": [
+    {
+      "a3_chamber_label": "1234",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "flag_chain": [
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "inverse_from_diagonal": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "inverse_from_flag": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_01",
+      "word_compact": "1234",
+      "word_one_line": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "a3_chamber_label": "1243",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "flag_chain": [
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        1,
+        2,
+        4,
+        3
+      ],
+      "inverse_from_flag": [
+        1,
+        2,
+        4,
+        3
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          4,
+          3
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_02",
+      "word_compact": "1243",
+      "word_one_line": [
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    {
+      "a3_chamber_label": "1324",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "flag_chain": [
+        [
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "inverse_from_diagonal": [
+        1,
+        3,
+        2,
+        4
+      ],
+      "inverse_from_flag": [
+        1,
+        3,
+        2,
+        4
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          3,
+          2,
+          4
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_03",
+      "word_compact": "1324",
+      "word_one_line": [
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    {
+      "a3_chamber_label": "1342",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "flag_chain": [
+        [
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        1,
+        3,
+        4,
+        2
+      ],
+      "inverse_from_flag": [
+        1,
+        3,
+        4,
+        2
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          4,
+          2
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_04",
+      "word_compact": "1342",
+      "word_one_line": [
+        1,
+        3,
+        4,
+        2
+      ]
+    },
+    {
+      "a3_chamber_label": "1423",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "flag_chain": [
+        [
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        1,
+        4,
+        2,
+        3
+      ],
+      "inverse_from_flag": [
+        1,
+        4,
+        2,
+        3
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          1,
+          4,
+          2,
+          3
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_05",
+      "word_compact": "1423",
+      "word_one_line": [
+        1,
+        4,
+        2,
+        3
+      ]
+    },
+    {
+      "a3_chamber_label": "1432",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "flag_chain": [
+        [
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        1,
+        4,
+        3,
+        2
+      ],
+      "inverse_from_flag": [
+        1,
+        4,
+        3,
+        2
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          1,
+          4,
+          3,
+          2
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_06",
+      "word_compact": "1432",
+      "word_one_line": [
+        1,
+        4,
+        3,
+        2
+      ]
+    },
+    {
+      "a3_chamber_label": "2134",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "flag_chain": [
+        [
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "inverse_from_diagonal": [
+        2,
+        1,
+        3,
+        4
+      ],
+      "inverse_from_flag": [
+        2,
+        1,
+        3,
+        4
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          1,
+          3,
+          4
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_07",
+      "word_compact": "2134",
+      "word_one_line": [
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "a3_chamber_label": "2143",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "flag_chain": [
+        [
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        2,
+        1,
+        4,
+        3
+      ],
+      "inverse_from_flag": [
+        2,
+        1,
+        4,
+        3
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          4
+        ],
+        [
+          2,
+          1,
+          4,
+          3
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_08",
+      "word_compact": "2143",
+      "word_one_line": [
+        2,
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "a3_chamber_label": "2314",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "flag_chain": [
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "inverse_from_diagonal": [
+        2,
+        3,
+        1,
+        4
+      ],
+      "inverse_from_flag": [
+        2,
+        3,
+        1,
+        4
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_09",
+      "word_compact": "2314",
+      "word_one_line": [
+        2,
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "a3_chamber_label": "2341",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "flag_chain": [
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        2,
+        3,
+        4,
+        1
+      ],
+      "inverse_from_flag": [
+        2,
+        3,
+        4,
+        1
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          4,
+          1
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_10",
+      "word_compact": "2341",
+      "word_one_line": [
+        2,
+        3,
+        4,
+        1
+      ]
+    },
+    {
+      "a3_chamber_label": "2413",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "flag_chain": [
+        [
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        2,
+        4,
+        1,
+        3
+      ],
+      "inverse_from_flag": [
+        2,
+        4,
+        1,
+        3
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          4,
+          1,
+          3
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_11",
+      "word_compact": "2413",
+      "word_one_line": [
+        2,
+        4,
+        1,
+        3
+      ]
+    },
+    {
+      "a3_chamber_label": "2431",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "flag_chain": [
+        [
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        2,
+        4,
+        3,
+        1
+      ],
+      "inverse_from_flag": [
+        2,
+        4,
+        3,
+        1
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          2,
+          4,
+          3,
+          1
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_12",
+      "word_compact": "2431",
+      "word_one_line": [
+        2,
+        4,
+        3,
+        1
+      ]
+    },
+    {
+      "a3_chamber_label": "3124",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "flag_chain": [
+        [
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "inverse_from_diagonal": [
+        3,
+        1,
+        2,
+        4
+      ],
+      "inverse_from_flag": [
+        3,
+        1,
+        2,
+        4
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          2,
+          4
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_13",
+      "word_compact": "3124",
+      "word_one_line": [
+        3,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "a3_chamber_label": "3142",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "flag_chain": [
+        [
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "inverse_from_flag": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          1,
+          4,
+          2
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_14",
+      "word_compact": "3142",
+      "word_one_line": [
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    {
+      "a3_chamber_label": "3214",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "flag_chain": [
+        [
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "inverse_from_diagonal": [
+        3,
+        2,
+        1,
+        4
+      ],
+      "inverse_from_flag": [
+        3,
+        2,
+        1,
+        4
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          4
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_15",
+      "word_compact": "3214",
+      "word_one_line": [
+        3,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "a3_chamber_label": "3241",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "flag_chain": [
+        [
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        3,
+        2,
+        4,
+        1
+      ],
+      "inverse_from_flag": [
+        3,
+        2,
+        4,
+        1
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          3,
+          2,
+          4,
+          1
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_16",
+      "word_compact": "3241",
+      "word_one_line": [
+        3,
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "a3_chamber_label": "3412",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "flag_chain": [
+        [
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        3,
+        4,
+        1,
+        2
+      ],
+      "inverse_from_flag": [
+        3,
+        4,
+        1,
+        2
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          3,
+          4,
+          1,
+          2
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_17",
+      "word_compact": "3412",
+      "word_one_line": [
+        3,
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "a3_chamber_label": "3421",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "flag_chain": [
+        [
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        3,
+        4,
+        2,
+        1
+      ],
+      "inverse_from_flag": [
+        3,
+        4,
+        2,
+        1
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          3,
+          4,
+          2,
+          1
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_18",
+      "word_compact": "3421",
+      "word_one_line": [
+        3,
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "a3_chamber_label": "4123",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "flag_chain": [
+        [
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        4,
+        1,
+        2,
+        3
+      ],
+      "inverse_from_flag": [
+        4,
+        1,
+        2,
+        3
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          1,
+          2,
+          3
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_19",
+      "word_compact": "4123",
+      "word_one_line": [
+        4,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "a3_chamber_label": "4132",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "flag_chain": [
+        [
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        4,
+        1,
+        3,
+        2
+      ],
+      "inverse_from_flag": [
+        4,
+        1,
+        3,
+        2
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          1,
+          3,
+          2
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_20",
+      "word_compact": "4132",
+      "word_one_line": [
+        4,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "a3_chamber_label": "4213",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "flag_chain": [
+        [
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        4,
+        2,
+        1,
+        3
+      ],
+      "inverse_from_flag": [
+        4,
+        2,
+        1,
+        3
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          1,
+          3
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_21",
+      "word_compact": "4213",
+      "word_one_line": [
+        4,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "a3_chamber_label": "4231",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "flag_chain": [
+        [
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        4,
+        2,
+        3,
+        1
+      ],
+      "inverse_from_flag": [
+        4,
+        2,
+        3,
+        1
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          4,
+          2,
+          3,
+          1
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_22",
+      "word_compact": "4231",
+      "word_one_line": [
+        4,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "a3_chamber_label": "4312",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "flag_chain": [
+        [
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "inverse_from_flag": [
+        4,
+        3,
+        1,
+        2
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          4,
+          3,
+          1,
+          2
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_23",
+      "word_compact": "4312",
+      "word_one_line": [
+        4,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "a3_chamber_label": "4321",
+      "checks": {
+        "diagonal_has_four_cells": true,
+        "diagonal_inverse_recovers_word": true,
+        "flag_has_three_layers": true,
+        "flag_inverse_recovers_word": true,
+        "pref_ord_r4_is_word": true,
+        "pref_set_r4_is_ambient_support": true
+      },
+      "claim_boundary": "indexing_bridge_only_no_magic_no_geometry_no_all_s4_classification",
+      "diagonal_cells": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "flag_chain": [
+        [
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "inverse_from_diagonal": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "inverse_from_flag": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "pref_ord_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          4,
+          3,
+          2,
+          1
+        ]
+      ],
+      "pref_set_r1_to_r4": [
+        [
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "prefix_support_vector_singleton": [
+        1,
+        1,
+        1
+      ],
+      "row_id": "s4_bridge_24",
+      "word_compact": "4321",
+      "word_one_line": [
+        4,
+        3,
+        2,
+        1
+      ]
+    }
+  ],
+  "schema": "s4layer.s4layer.s4_bridge_table.v0.1",
+  "source_locks": [
+    "IMPORT_CONTRACT.md",
+    "docs/NORMALIZATION_LOCK.md",
+    "docs/REPLAY_BOUNDARY.md",
+    "docs/REPLAY_BOUNDARY.md"
+  ],
+  "status": "generated_indexing_artifact_not_public_theorem"
+}

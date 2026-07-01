@@ -1,0 +1,151 @@
+\section{Selected Data Package and Poset-Cone Counts}
+\label{sec:selected-atlas}
+
+The finite artifact shipped with the repository uses the historical name ``selected atlas.'' In this paper it is used more narrowly: it is a selected data package for the rows, counts, and witnesses used below, not a classification of all subsets of \(\Sfour\). Only the 219 distinct poset-cone count is used as a mathematical subset count; the values 226 and 221 are artifact-row accounting values for the selected package boundary.
+
+\begin{definition}[Selected data row]
+\label{def:selected-atlas-row}
+A selected data row is a finite record attached to a row identifier. An ordinary selected row contains a finite subset \(X\subseteq\Sfour\), written by explicit one-line words, together with declared fields such as row size, prefix data, poset-cone status, subgroup status, and induced coset data when a subgroup row is present. A batch row records a finite family or summary, and is not itself treated as a single subset \(X\subseteq\Sfour\).
+\end{definition}
+
+\begin{definition}[Theorem-bearing and diagnostic fields]
+\label{def:field-roles}
+A field is \emph{theorem-bearing} in this paper only when it is used in a stated result below and has a declared finite replay or proof route. Other recorded fields are diagnostic or deferred fields. Diagnostic fields may help compare rows, but they are not promoted to classification theorems in this paper.
+\end{definition}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{0.23\textwidth}p{0.32\textwidth}p{0.33\textwidth}@{}}
+\toprule
+Field group & Typical fields & Role in this paper \\
+\midrule
+Identity and row class & row identifier, name, family, status & locates a finite row or batch record \\
+Underlying subset & size, explicit one-line words & defines \(X\subseteq\Sfour\) for ordinary rows \\
+Prefix data & ordered and set-prefix counts, \(A_3\) prefix-support vector & supports \cref{lem:prefix-support-dictionary} and examples \\
+Poset data & common precedence, closure size, exact poset-cone status & supports the poset-cone counts and \cref{prop:common-precedence-exactness} \\
+Group data & subgroup status, induced left/right coset counts & supports the subgroup count and the locked \(\Dfour/\Vfour\) subgroup-row corollaries \\
+Diagnostics and deferred profiles & connectedness, stabilizers, normalizers, deferred profiles & recorded data only, unless a later theorem opens them \\
+\bottomrule
+\end{tabular}
+\caption{Compact field-role summary for the selected data package. Not every recorded column is a theorem statement.}
+\label{tab:atlas-field-roles}
+\end{table}
+
+\begin{certproposition}[Selected artifact-row count]
+\label{prop:selected-atlas-count}
+Under the declared row schema, the selected data package contains 226 certified artifact rows.
+\end{certproposition}
+
+\begin{proof}
+The selected data package is a finite artifact with a fixed row schema and a finite summary block. The expected-count certificate and the independent finite checker both record
+\[
+  \text{number of selected rows}=226.
+\]
+The count is a row count inside the selected artifact. It includes ordinary subset rows and two batch summary rows. The row-family accounting used in this paper is displayed in \cref{tab:atlas-row-family-accounting}; summing the row counts gives
+\[
+  2+1+218+1+2+1+1=226.
+\]
+This proves the certified row-count statement within the declared selected-data boundary.
+\end{proof}
+
+In this count, a strict labeled poset means a transitive irreflexive order relation recorded on the label set \([4]\); equivalently, it is the strict comparability relation associated with a finite partial order on \([4]\).
+
+\begin{certproposition}[Strict labeled posets and distinct poset cones]
+\label{prop:poset-cone-distinct-count}
+The selected data package records 219 strict labeled posets on \([4]\). Their linear-extension sets give 219 distinct poset-cone subsets of \(\Sfour\).
+\end{certproposition}
+
+\begin{proof}
+The finite poset enumeration certificate records two equal quantities:
+\[
+  \#\{\text{strict labeled posets on }[4]\}=219
+\]
+and
+\[
+  \#\{\Lin(P):P\text{ a strict labeled poset on }[4]\}=219.
+\]
+The second quantity is the one used as a subset count: it counts distinct subsets of \(\Sfour\), not artifact rows. The equality is also consistent with the common-precedence recovery principle proved later in \cref{prop:common-precedence-exactness}: the linear-extension set of a finite strict poset determines exactly the forced order relations of that poset, because incomparable pairs can be realized in either relative order by linear extensions. Thus the certified finite enumeration supplies 219 distinct poset-cone subsets in the selected \([4]\) layer.
+\end{proof}
+
+\begin{certproposition}[Exact artifact-row count]
+\label{prop:exact-artifact-row-count}
+The selected data package records 221 exact poset-cone artifact rows among its 226 selected rows. This 221 is an artifact-row count, not the number of distinct poset-cone subsets; the distinct count is 219.
+\end{certproposition}
+
+\begin{proof}
+The expected-count certificate records
+\[
+  \text{exact poset-cone artifact rows}=221
+\]
+and \cref{prop:poset-cone-distinct-count} records 219 distinct poset-cone subsets. These numbers count different objects.
+
+The selected artifact contains a deduplicated poset-cone layer with 219 distinct subsets. It also contains two sanity rows that are themselves exact poset cones: the singleton row \(\{\word{1234}\}\) and the full row \(\Sfour\). These two rows duplicate subsets already present in the deduplicated poset-cone layer. Equivalently,
+\[
+  219\text{ distinct poset-cone subsets}+2\text{ duplicate exact sanity rows}=221
+\]
+exact poset-cone artifact rows. Hence 221 is a row count in the selected artifact, while 219 is the distinct mathematical subset count.
+
+The empty row in the edge-case family is included only as an artifact edge case. It is not an exact poset cone under \cref{def:exact-poset-cone}, because every finite strict poset on \([4]\) has at least one linear extension; the common-precedence criterion of \cref{prop:common-precedence-exactness} is stated only for nonempty \(X\).
+\end{proof}
+
+\begin{certproposition}[Subgroup count]
+\label{prop:s4-subgroup-count}
+Under the locked composition convention used in this paper, the selected data package records 30 subgroups of \(\Sfour\).
+\end{certproposition}
+
+\begin{proof}
+The finite subgroup enumeration in the selected data package records 30 subgroups of \(\Sfour\), with subgroup-size distribution
+\[
+  1^1,\ 2^9,\ 3^4,\ 4^7,\ 6^4,\ 8^3,\ 12^1,\ 24^1.
+\]
+The weighted sum of this distribution is not the relevant check; rather, the exponents count how many subgroups occur at each order, and their sum is
+\[
+  1+9+4+7+4+3+1+1=30.
+\]
+The same convention is used for the locked \(\Dfour\) and \(\Vfour\) subgroup statements in \cref{sec:d4-v4}.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}lrrp{0.34\textwidth}@{}}
+\toprule
+Family & Rows & Exact rows & Role \\
+\midrule
+edge case & 2 & 1 & empty row and singleton sanity row \\
+full group & 1 & 1 & full \(\Sfour\) sanity row \\
+poset cone & 218 & 218 & generic deduplicated poset-cone rows \\
+N-poset boundary & 1 & 1 & distinguished five-word boundary example \\
+subgroup rows & 2 & 0 & locked \(\Dfour\) and \(\Vfour\) rows \\
+subgroup batch & 1 & 0 & summary of all \(\Sfour\) subgroups \\
+coset batch & 1 & 0 & induced coset summaries for locked subgroup rows \\
+\midrule
+Total & 226 & 221 & selected artifact boundary \\
+\bottomrule
+\end{tabular}
+\caption{Row-family accounting for the selected data package. Batch rows support finite summaries but are not ordinary subsets \(X\subseteq\Sfour\).}
+\label{tab:atlas-row-family-accounting}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Quantity & Certified value \\
+\midrule
+Selected artifact rows & 226 \\
+Strict labeled posets on \([4]\) & 219 \\
+Distinct poset-cone subsets of \(\Sfour\) & 219 \\
+Exact poset-cone artifact rows & 221 \\
+Subgroups of \(\Sfour\) under the locked convention & 30 \\
+\bottomrule
+\end{tabular}
+\caption{Selected package counts recorded for replay context. Only the 219 distinct poset-cone count is a mathematical subset count; 226 and 221 are artifact-row counts.}
+\label{tab:atlas-counts}
+\end{table}
+
+\begin{remark}[What the selected data package does not count]
+\label{rem:atlas-nonclassification}
+The selected data package is not the full power set of \(\Sfour\). Since \(|\Sfour|=24\), a full subset classification would contain \(2^{24}=16{,}777{,}216\) subsets. The 226 rows above are a selected finite artifact boundary, not an all-subsets classification.
+\end{remark}

@@ -1,0 +1,44 @@
+\section{The N-Poset Boundary Example}
+\label{sec:n-poset}
+
+\begin{example}[The N-poset row]
+\label{ex:n-poset-row}
+Let \(P_N\) be the poset on \([4]\) with covering relations
+\[
+  1<3,\qquad 2<3,\qquad 2<4.
+\]
+\end{example}
+
+\begin{proposition}[The N-poset witness]
+\label{prop:n-poset-witness}
+The poset \(P_N\) has exactly five linear extensions:
+\[
+  \Lin(P_N)=\{\word{1234},\word{1243},\word{2134},\word{2143},\word{2413}\}.
+\]
+Consequently this row is an exact poset cone. It is not a subgroup row of \(\Sfour\).
+\end{proposition}
+
+\begin{proof}
+The relations defining \(P_N\) say that \(1\) must precede \(3\), \(2\) must precede \(3\), and \(2\) must precede \(4\). Each of the five displayed words satisfies these three requirements.
+
+It remains to see that there are no further linear extensions. At the first step, the minimal elements are \(1\) and \(2\). If \(1\) is chosen first, then \(2\) must be chosen second, because both \(3\) and \(4\) still require \(2\) to precede them. The remaining labels \(3\) and \(4\) may then be ordered freely, giving
+\[
+  \word{1234},\qquad \word{1243}.
+\]
+If \(2\) is chosen first, then \(1\) and \(4\) are available. The branch beginning with \(21\) leaves \(3\) and \(4\) available in either order, giving
+\[
+  \word{2134},\qquad \word{2143}.
+\]
+The branch beginning with \(24\) forces \(1\) to occur before \(3\), giving only
+\[
+  \word{2413}.
+\]
+These five branches exhaust all possible choices of minimal elements, so \(\Lin(P_N)\) is exactly the displayed five-word set.
+
+The row is therefore an exact poset cone by definition. It cannot be a subgroup row of \(\Sfour\), because a subgroup of a finite group has order dividing the group order, and \(5\nmid 24\).
+\end{proof}
+
+\begin{remark}[Role in the comparison]
+\label{rem:n-poset-role}
+The N-poset row gives an exact poset cone that is not a subgroup row. Together with the locked \(\Dfour\) and \(\Vfour\) rows, it supplies the finite witnesses needed in \cref{sec:selected-comparison}.
+\end{remark}

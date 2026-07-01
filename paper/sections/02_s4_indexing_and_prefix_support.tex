@@ -1,0 +1,132 @@
+\section{Words, Prefix Flags, and Support}
+\label{sec:s4-indexing}
+
+We use standard one-line notation for permutations of the type-A symmetric group; see \cite{BjornerBrenti2005} for Coxeter and symmetric-group background. The finite maps below are nevertheless defined explicitly on \(\Sfour\).
+
+\begin{definition}[One-line words]
+\label{def:one-line-s4}
+Let \([4]=\{1,2,3,4\}\). We write a permutation \(\sigma\in\Sfour\) in one-line notation as
+\[
+  \sigma=\sigma_1\sigma_2\sigma_3\sigma_4,
+\]
+where \(\{\sigma_1,\sigma_2,\sigma_3,\sigma_4\}=[4]\). Let \(\W\) denote this set of 24 one-line words.
+\end{definition}
+
+\begin{definition}[Ordered and set-prefix shadows]
+\label{def:prefix-shadows}
+For \(X\subseteq\Sfour\) and \(1\le r\le4\), define
+\[
+  \Pref_r^{\mathrm{ord}}(X)=\{(\sigma_1,\ldots,\sigma_r):\sigma\in X\}
+\]
+and
+\[
+  \Pref_r^{\mathrm{set}}(X)=\{\{\sigma_1,\ldots,\sigma_r\}:\sigma\in X\}.
+\]
+The ordered prefix shadow remembers the word order; the set-prefix shadow remembers only the underlying support in \([4]\).
+\end{definition}
+
+\begin{definition}[Local prefix flags]
+\label{def:prefix-flag}
+For \(\sigma\in\Sfour\), set
+\[
+  \Phi(\sigma)=\{\sigma_1\}\subset \{\sigma_1,\sigma_2\}\subset \{\sigma_1,\sigma_2,\sigma_3\}.
+\]
+Let \(\Fflag\) be the set of all chains \(A_1\subset A_2\subset A_3\subset [4]\) with \(|A_i|=i\). For a flag \(A_1\subset A_2\subset A_3\), write its vertex, edge, and face supports as
+\[
+  v(A_1,A_2,A_3)=A_1,\qquad e(A_1,A_2,A_3)=A_2,
+  \qquad f(A_1,A_2,A_3)=A_3.
+\]
+The full support \([4]\) is the ambient four-element support and is not counted as a prefix-flag layer.
+\end{definition}
+
+\begin{definition}[Prefix-support vector]
+\label{def:prefix-support-vector}
+For \(X\subseteq\Sfour\), define
+\[
+  V_{\mathrm{flag}}(X)=\{v(\Phi(\sigma)):\sigma\in X\},\quad
+  E_{\mathrm{flag}}(X)=\{e(\Phi(\sigma)):\sigma\in X\},
+\]
+\[
+  F_{\mathrm{flag}}(X)=\{f(\Phi(\sigma)):\sigma\in X\},
+\]
+and
+\[
+  \psA(X)=\bigl(|V_{\mathrm{flag}}(X)|,|E_{\mathrm{flag}}(X)|,|F_{\mathrm{flag}}(X)|\bigr).
+\]
+\end{definition}
+
+\begin{lemma}[Prefix-support dictionary]
+\label{lem:prefix-support-dictionary}
+For every \(X\subseteq\Sfour\),
+\[
+  \psA(X)=\bigl(|\Pref_1^{\mathrm{set}}(X)|,|\Pref_2^{\mathrm{set}}(X)|,|\Pref_3^{\mathrm{set}}(X)|\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Let \(\sigma\in X\). By definition,
+\[
+  \Phi(\sigma)=\{\sigma_1\}\subset \{\sigma_1,\sigma_2\}\subset
+  \{\sigma_1,\sigma_2,\sigma_3\}.
+\]
+Therefore the vertex support contributed by \(\sigma\) is precisely \(\{\sigma_1\}\), the edge support contributed by \(\sigma\) is precisely \(\{\sigma_1,\sigma_2\}\), and the face support contributed by \(\sigma\) is precisely \(\{\sigma_1,\sigma_2,\sigma_3\}\). Taking the union of these supports over all \(\sigma\in X\) gives
+\[
+  V_{\mathrm{flag}}(X)=\Pref_1^{\mathrm{set}}(X),\qquad
+  E_{\mathrm{flag}}(X)=\Pref_2^{\mathrm{set}}(X),\qquad
+  F_{\mathrm{flag}}(X)=\Pref_3^{\mathrm{set}}(X).
+\]
+Taking cardinalities gives the stated vector identity.
+\end{proof}
+
+\begin{remark}[Ordered prefixes versus supports]
+\label{rem:ordered-versus-set-prefix}
+The lemma uses set-prefix shadows, not ordered prefix shadows. For instance, the words \(\word{1234}\) and \(\word{2134}\) have two different ordered length-two prefixes, \((1,2)\) and \((2,1)\), but they determine the same two-element support \(\{1,2\}\). The prefix-support vector records supports.
+\end{remark}
+
+\begin{definition}[Permutation-matrix support]
+\label{def:permutation-matrix-support}
+For \(\sigma\in\Sfour\), define
+\[
+  \Delta(\sigma)=\{(i,\sigma_i):1\le i\le4\}\subset [4]\times[4].
+\]
+Let \(\Dgraph\) be the set of all four-element subsets of \([4]\times[4]\) with exactly one point in each row and exactly one point in each column. Thus an element of \(\Dgraph\) is the support of a \(4\times4\) permutation matrix.
+\end{definition}
+
+\begin{theorem}[The finite \texorpdfstring{\(\Sfour\)}{S4} indexing bridge]
+\label{thm:s4-indexing-bridge}
+The finite sets \(\W\), \(\Fflag\), and \(\Dgraph\) are canonically bijective.
+\end{theorem}
+
+\begin{proof}
+We first prove that \(\Phi:\W\to\Fflag\) is a bijection. For \(\sigma\in\W\), the sets
+\[
+  \{\sigma_1\}\subset \{\sigma_1,\sigma_2\}\subset \{\sigma_1,\sigma_2,\sigma_3\}
+\]
+have cardinalities \(1,2,3\), so \(\Phi(\sigma)\in\Fflag\).
+
+Define an inverse map \(\Psi:\Fflag\to\W\) as follows. Given \(A_1\subset A_2\subset A_3\) in \(\Fflag\), let \(a_1\) be the unique element of \(A_1\), let \(a_2\) be the unique element of \(A_2\setminus A_1\), let \(a_3\) be the unique element of \(A_3\setminus A_2\), and let \(a_4\) be the unique element of \([4]\setminus A_3\). Then
+\[
+  \Psi(A_1,A_2,A_3)=a_1a_2a_3a_4.
+\]
+The four labels \(a_1,a_2,a_3,a_4\) are distinct and exhaust \([4]\), so this is a word in \(\W\). If \(A_i\) came from \(\Phi(\sigma)\), then the successive differences are \(\{\sigma_1\}\), \(\{\sigma_2\}\), \(\{\sigma_3\}\), and \(\{\sigma_4\}\); hence \(\Psi(\Phi(\sigma))=\sigma\). Conversely, for any flag \((A_1,A_2,A_3)\), the construction gives
+\[
+  A_1=\{a_1\},\qquad A_2=\{a_1,a_2\},\qquad A_3=\{a_1,a_2,a_3\},
+\]
+so \(\Phi(\Psi(A_1,A_2,A_3))=(A_1,A_2,A_3)\). Thus \(\Phi\) is a bijection.
+
+We next prove that \(\Delta:\W\to\Dgraph\) is a bijection. For \(\sigma\in\W\), the set \(\Delta(\sigma)\) contains exactly one cell in row \(i\), namely \((i,\sigma_i)\). Since \(\sigma\) is a permutation, the four column values \(\sigma_1,\sigma_2,\sigma_3,\sigma_4\) are distinct and exhaust \([4]\); hence every column is used exactly once.
+
+Define \(\Omega:\Dgraph\to\W\) by reading the unique selected column in each row. If \(C\in\Dgraph\), let \((i,c_i)\) be the unique cell of \(C\) in row \(i\). The condition that each column occurs once says that \(c_1c_2c_3c_4\) is a one-line word in \(\Sfour\), and we set \(\Omega(C)=c_1c_2c_3c_4\). Then \(\Omega(\Delta(\sigma))=\sigma\) for every \(\sigma\in\W\), and \(\Delta(\Omega(C))=C\) for every \(C\in\Dgraph\). Thus \(\Delta\) is a bijection.
+
+Composing the two bijections through \(\W\) gives canonical bijections among the three finite models.
+\end{proof}
+
+\begin{remark}[Finite replay]
+\label{rem:indexing-replay}
+The proof above is structural and does not rely on enumeration. The finite replay table checks the same maps on all 24 words and is used as regression evidence for the computational package.
+\end{remark}
+
+\begin{remark}[Indexing boundary]
+\label{rem:indexing-boundary}
+\Cref{thm:s4-indexing-bridge} identifies finite labels. It does not assert that every structural property placed on subsets of \(\Sfour\) is carried over by every later interpretation of those labels.
+\end{remark}
