@@ -21,7 +21,7 @@ python -B scripts/check_public_package.py --check
 python -B -m pytest -q -p no:cacheprovider tests
 ```
 
-Expected summaries: `replay_all.py --verify` reports JSON with `"status": "passed"`, `"mode": "verify"`, and `"package_certification_mode": "check"`; pytest reports `4 passed`.
+Expected summaries: `replay_all.py --verify` reports JSON with `"status": "passed"`, `"mode": "verify"`, and `"package_certification_mode": "check"`; pytest reports `9 passed`.
 
 The replay command in `--verify` mode checks certificate status, verifies `certified/replay_hashes.sha256`, and runs package certification in read-only check mode. It does not rewrite the replay hash manifest, package manifest, or release certification. Use `python -B scripts/replay_all.py --update-manifest` only when intentionally refreshing the replay hash manifest and public package certification after source, artifact, table, or certificate changes.
 

@@ -53,10 +53,12 @@ REQUIRED_STATIC = [
     "scripts/replay_all.py",
     "scripts/check_public_package.py",
     "tests/test_public_package.py",
+    "tests/test_mathematical_core.py",
     "docs/CLAIM_BOUNDARY.md",
     "docs/REPLAY_BOUNDARY.md",
     "docs/SOURCE_AND_BIBLIOGRAPHY_NOTES.md",
     "docs/PUBLIC_PACKAGE_MANIFEST.md",
+    ".github/workflows/replay.yml",
 ]
 HASHED_REPLAY = [
     "scripts/replay_all.py",
@@ -98,6 +100,7 @@ NONPACKAGE_MARKERS = [
     "leg" + "acy" + "_quarantine",
 ]
 CITE_RE = re.compile(r"\\(?:[A-Za-z]*cite[A-Za-z*]*|cite)\s*(?:\[[^\]]*\]\s*){0,2}\{([^}]+)\}")
+EXPECTED_REMOTE_SUBSTRING = "github.com/aconsciousfractal/Linear-Extension-Sets-and-Subgroup-Rows-in-S4-A-Finite-Witness-Separation"
 
 
 def sha256(path: Path) -> str:
@@ -176,19 +179,27 @@ def computed_package_manifest_text() -> str:
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
-def git_remotes() -> list[str]:
+def git_remote_public_violations() -> list[str]:
     if not (ROOT / ".git").exists():
         return []
     completed = subprocess.run(
-        ["git", "remote"],
+        ["git", "remote", "-v"],
         cwd=ROOT,
         text=True,
         capture_output=True,
         check=False,
     )
     if completed.returncode != 0:
-        return [f"git remote failed with exit code {completed.returncode}"]
-    return sorted(line.strip() for line in completed.stdout.splitlines() if line.strip())
+        return [f"git remote -v failed with exit code {completed.returncode}"]
+    violations: list[str] = []
+    for line in completed.stdout.splitlines():
+        clean = line.strip()
+        if not clean:
+            continue
+        normalized = clean.replace(":", "/").lower()
+        if EXPECTED_REMOTE_SUBSTRING.lower() not in normalized:
+            violations.append(clean)
+    return sorted(violations)
 
 
 def run_checks(*, check_manifest: bool, require_certification: bool) -> list[dict[str, Any]]:
@@ -260,7 +271,7 @@ def run_checks(*, check_manifest: bool, require_certification: bool) -> list[dic
     add(checks, "readme.has_build_commands", True, "pdflatex -jobname" in readme and "python -B scripts/replay_all.py --verify" in readme)
     add(checks, "reproduce.uses_read_only_check", True, "replay_all.py --verify" in reproduce and "check_public_package.py --check" in reproduce)
     add(checks, "boundary.has_nonclaims", True, "This package does not claim" in boundary)
-    add(checks, "git.no_remote_before_publish", [], git_remotes())
+    add(checks, "git.remote_public_ok", [], git_remote_public_violations())
 
     if check_manifest:
         manifest = ROOT / MANIFEST_REL
@@ -274,7 +285,7 @@ def run_checks(*, check_manifest: bool, require_certification: bool) -> list[dic
 def result_from_checks(checks: list[dict[str, Any]]) -> dict[str, Any]:
     passed = all(item["passed"] for item in checks)
     return {
-        "schema": "s4layer.public_repository_certification.v0.3",
+        "schema": "linear_extension_s4.public_repository_certification.v1.0",
         "status": "passed" if passed else "failed",
         "checks_total": len(checks),
         "checks_failed": sum(1 for item in checks if not item["passed"]),
@@ -291,7 +302,7 @@ def write_release_files(result: dict[str, Any]) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Verify or refresh the public S4 layer package certification.")
+    parser = argparse.ArgumentParser(description="Verify or refresh the public S4 finite-witness package certification.")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--check", action="store_true", help="read-only verification mode (default)")
     mode.add_argument("--write", action="store_true", help="refresh certification and package manifest")

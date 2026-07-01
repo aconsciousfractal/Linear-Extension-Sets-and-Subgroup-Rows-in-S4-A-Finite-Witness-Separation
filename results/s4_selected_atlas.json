@@ -43164,7 +43164,7 @@
       }
     }
   ],
-  "schema": "s4layer.s4atlas.s4_structured_subsets_atlas.v0.2",
+  "schema": "linear_extension_s4.atlas.s4_structured_subsets_atlas.v0.2",
   "source_locks": [
     "docs/SOURCE_AND_BIBLIOGRAPHY_NOTES.md",
     "docs/NORMALIZATION_LOCK.md",

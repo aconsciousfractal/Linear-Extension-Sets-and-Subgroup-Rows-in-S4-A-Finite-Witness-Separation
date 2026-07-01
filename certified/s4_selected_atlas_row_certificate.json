@@ -57415,6 +57415,6 @@
   "num_failed": 0,
   "num_row_invariant_checks": 3586,
   "project": "s4_selected_atlas",
-  "schema": "s4layer.s4atlas.row_invariant_certification.v0.1",
+  "schema": "linear_extension_s4.atlas.row_invariant_certification.v0.1",
   "status": "passed"
 }

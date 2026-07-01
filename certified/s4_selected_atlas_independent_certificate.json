@@ -1,11 +1,11 @@
 {
-  "atlas_schema": "s4layer.s4atlas.s4_structured_subsets_atlas.v0.2",
+  "atlas_schema": "linear_extension_s4.atlas.s4_structured_subsets_atlas.v0.2",
   "certification_scope": "independent finite checker for selected-atlas finite computational propositions; not theorem-bearing by itself",
   "checks": [
     {
-      "actual": "s4layer.s4atlas.s4_structured_subsets_atlas.v0.2",
+      "actual": "linear_extension_s4.atlas.s4_structured_subsets_atlas.v0.2",
       "detail": "",
-      "expected": "s4layer.s4atlas.s4_structured_subsets_atlas.v0.2",
+      "expected": "linear_extension_s4.atlas.s4_structured_subsets_atlas.v0.2",
       "id": "atlas.schema",
       "status": "pass"
     },
@@ -655,6 +655,6 @@
   "num_checks": 55,
   "num_failed": 0,
   "project": "s4_selected_atlas",
-  "schema": "s4layer.s4atlas.independent_certification.v0.1",
+  "schema": "linear_extension_s4.atlas.independent_certification.v0.1",
   "status": "passed"
 }

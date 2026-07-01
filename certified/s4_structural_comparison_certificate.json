@@ -1,5 +1,5 @@
 {
-  "artifact": "results/s4layer_poset_d4_v4_comparison.json",
+  "artifact": "results/s4_structural_comparison.json",
   "checks": [
     {
       "expected": "passed",
@@ -21,7 +21,7 @@
     },
     {
       "expected": "passed",
-      "id": "source.s4layer_d4_v4_import_certificate",
+      "id": "source.d4_v4_import_certificate_status",
       "observed": "passed",
       "passed": true
     },
@@ -209,7 +209,7 @@
   "checks_failed": 0,
   "checks_total": 34,
   "claim_boundary": "selected-row-comparison-only-not-all-subsets-classification",
-  "project": "s4_layer_public_package",
-  "schema": "s4layer.s4layer.comparison_table_certification.v0.1",
+  "project": "linear_extension_s4_public_package",
+  "schema": "linear_extension_s4.comparison_table_certification.v0.1",
   "status": "passed"
 }

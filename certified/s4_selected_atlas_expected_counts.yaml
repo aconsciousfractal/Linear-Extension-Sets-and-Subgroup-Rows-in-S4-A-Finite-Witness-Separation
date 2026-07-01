@@ -1,4 +1,4 @@
-project: s4_layer_public_package
+project: linear_extension_s4_public_package
 status: expected_counts_seed_v0_1
 selected_atlas_import:
   s4_size: 24
@@ -7,7 +7,7 @@ selected_atlas_import:
   distinct_poset_cone_subsets: 219
   exact_poset_cone_artifact_rows: 221
   subgroups_s4: 30
-s4_layer_followup:
+linear_extension_s4_followup:
   s4_bridge_rows: 24
   bridge_models:
     - one_line_s4_word

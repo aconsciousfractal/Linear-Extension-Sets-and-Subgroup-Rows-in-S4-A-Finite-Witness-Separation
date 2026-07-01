@@ -1,5 +1,5 @@
 {
-  "artifact": "results/s4layer_s4_bridge_table.json",
+  "artifact": "results/s4_bridge_table.json",
   "checks": [
     {
       "expected": 24,
@@ -98,8 +98,8 @@
   ],
   "checks_failed": 0,
   "checks_total": 9,
-  "project": "s4_layer_public_package",
+  "project": "linear_extension_s4_public_package",
   "public_claim_boundary": "finite_indexing_artifact_only_not_public_theorem",
-  "schema": "s4layer.s4layer.s4_bridge_table_certification.v0.1",
+  "schema": "linear_extension_s4.s4_bridge_table_certification.v0.1",
   "status": "passed"
 }

@@ -49,7 +49,7 @@ python -B scripts/check_public_package.py --check
 python -B -m pytest -q -p no:cacheprovider tests
 ```
 
-Expected summaries: `replay_all.py --verify` reports JSON with `"status": "passed"`, `"mode": "verify"`, and `"package_certification_mode": "check"`; pytest reports `4 passed`. The replay command is read-only. Maintainers should use `python -B scripts/replay_all.py --update-manifest` only after intentional source, artifact, or certificate changes.
+Expected summaries: `replay_all.py --verify` reports JSON with `"status": "passed"`, `"mode": "verify"`, and `"package_certification_mode": "check"`; pytest reports `9 passed`. The replay command is read-only. Maintainers should use `python -B scripts/replay_all.py --update-manifest` only after intentional source, artifact, or certificate changes.
 
 ## Claim Boundary
 

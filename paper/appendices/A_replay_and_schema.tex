@@ -26,7 +26,7 @@ python -m pip install -r requirements.txt
 \end{verbatim}
 The expected read-only replay summary is a JSON object with fields \verb|"status": "passed"|, \verb|"mode": "verify"|, \verb|"package_certification_mode": "check"|, and a package-checker summary reporting zero failed checks. The expected public test summary is:
 \begin{verbatim}
-4 passed
+9 passed
 \end{verbatim}
 A release build should be made only after the last maintainer refresh and read-only replay pass.
 
@@ -119,7 +119,7 @@ Batch rows require a separate convention. The selected data package includes bat
 
 The integrity policy is SHA-256 over the exact bytes of the replay driver and each packaged data, certificate, and table artifact listed in \cref{tab:replay-artifacts}. The hash manifest itself records those digests but is not self-hashed. The manifest format is
 \begin{verbatim}
-<sha256-hex>  <repository-relative-path>
+SHA256_HEX  repository/relative/path
 \end{verbatim}
 with one line per hash-covered artifact. A paper build is considered tied to the replay package only when:
 \begin{enumerate}[label=(\roman*)]

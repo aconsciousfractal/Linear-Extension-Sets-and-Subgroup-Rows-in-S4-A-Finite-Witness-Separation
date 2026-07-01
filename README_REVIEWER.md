@@ -7,7 +7,7 @@ Recommended review order:
 1. Build `paper/main.tex` with the commands in `REPRODUCE.md`.
 2. Run `python -B scripts/replay_all.py --verify` from the repository root. Expected JSON fields include `"status": "passed"`, `"mode": "verify"`, and `"package_certification_mode": "check"`.
 3. Run `python -B scripts/check_public_package.py --check`.
-4. Run `python -B -m pytest -q -p no:cacheprovider tests`; expected summary: `4 passed`.
+4. Run `python -B -m pytest -q -p no:cacheprovider tests`; expected summary: `9 passed`.
 5. Compare the selected witness table in `tables/` with the proposition in Section 7 of the paper.
 6. Check `docs/CLAIM_BOUNDARY.md` for nonclaims.
 

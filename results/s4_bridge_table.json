@@ -22,7 +22,7 @@
     "permutation_diagonals": 24,
     "s4_words": 24
   },
-  "project": "s4_layer_public_package",
+  "project": "linear_extension_s4_public_package",
   "rows": [
     {
       "a3_chamber_label": "1234",
@@ -2641,7 +2641,7 @@
       ]
     }
   ],
-  "schema": "s4layer.s4layer.s4_bridge_table.v0.1",
+  "schema": "linear_extension_s4.s4_bridge_table.v0.1",
   "source_locks": [
     "IMPORT_CONTRACT.md",
     "docs/NORMALIZATION_LOCK.md",
