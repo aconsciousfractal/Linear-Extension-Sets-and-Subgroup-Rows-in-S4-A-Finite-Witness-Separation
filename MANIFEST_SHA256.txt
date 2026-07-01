@@ -1,6 +1,6 @@
 # SHA-256 manifest
 
-a1712c32822cd5d2d1a53dd1d83c9d237d596c0ddf4a912fba5b7e9ddda3fd38  .gitattributes
+6a551f24942b1f72841be71e900fc9aeab712501ab7dbd0423c8d0bbdaa89a78  .gitattributes
 0788d020aad44a6900ef533299b56f010d55a2402f058c6e90b05ced326d39f6  .github/workflows/replay.yml
 21edaf1d420c9c2987ad4de54cbf1c2009b2e6d10763f08de3d173088691c2aa  .gitignore
 7112e1dddb4f1b9308e8f5e3ee4c3d02d723bba250ea1568c35d8065fb2bd91a  CITATION.cff
