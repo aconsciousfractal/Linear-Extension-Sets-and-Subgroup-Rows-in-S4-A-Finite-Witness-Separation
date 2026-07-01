@@ -5,6 +5,7 @@ import hashlib
 import json
 import re
 import subprocess
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -98,6 +99,9 @@ NONPACKAGE_MARKERS = [
     "MASTER" + "_MAP",
     "Finite Centered" + " Incidence Geometry",
     "leg" + "acy" + "_quarantine",
+    "S4" + "LAYER",
+    "s4" + "_" + "layer",
+    "s4" + "-" + "layer",
 ]
 CITE_RE = re.compile(r"\\(?:[A-Za-z]*cite[A-Za-z*]*|cite)\s*(?:\[[^\]]*\]\s*){0,2}\{([^}]+)\}")
 EXPECTED_REMOTE_SUBSTRING = "github.com/aconsciousfractal/Linear-Extension-Sets-and-Subgroup-Rows-in-S4-A-Finite-Witness-Separation"
@@ -220,6 +224,7 @@ def run_checks(*, check_manifest: bool, require_certification: bool) -> list[dic
     local_hits: list[str] = []
     marker_hits: list[str] = []
     replacement_hits: list[str] = []
+    hidden_unicode_hits: list[str] = []
     for path in text_files():
         rel = path.relative_to(ROOT).as_posix()
         text = path.read_text(encoding="utf-8", errors="replace")
@@ -228,6 +233,11 @@ def run_checks(*, check_manifest: bool, require_certification: bool) -> list[dic
                 local_hits.append(f"{rel}:{token}")
         if "\ufffd" in text:
             replacement_hits.append(rel)
+        for idx, char in enumerate(text):
+            if unicodedata.category(char) == "Cf":
+                hidden_unicode_hits.append(
+                    f"{rel}:{idx}:U+{ord(char):04X}:{unicodedata.name(char, 'UNKNOWN')}"
+                )
         lowered = text.lower()
         for token in NONPACKAGE_MARKERS:
             if token.lower() in lowered:
@@ -235,6 +245,7 @@ def run_checks(*, check_manifest: bool, require_certification: bool) -> list[dic
     add(checks, "public.no_local_paths", [], local_hits)
     add(checks, "public.no_process_markers", [], marker_hits)
     add(checks, "public.no_replacement_chars", [], replacement_hits)
+    add(checks, "public.no_hidden_unicode_controls", [], hidden_unicode_hits)
 
     entries = replay_hash_entries()
     add(checks, "replay_hash.coverage", sorted(HASHED_REPLAY), sorted(entries))
