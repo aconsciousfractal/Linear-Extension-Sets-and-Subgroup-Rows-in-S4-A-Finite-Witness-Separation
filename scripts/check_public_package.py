@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
 from pathlib import Path
 from typing import Any
 
@@ -175,6 +176,20 @@ def computed_package_manifest_text() -> str:
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
+def git_remotes() -> list[str]:
+    if not (ROOT / ".git").exists():
+        return []
+    completed = subprocess.run(
+        ["git", "remote"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if completed.returncode != 0:
+        return [f"git remote failed with exit code {completed.returncode}"]
+    return sorted(line.strip() for line in completed.stdout.splitlines() if line.strip())
+
 
 def run_checks(*, check_manifest: bool, require_certification: bool) -> list[dict[str, Any]]:
     checks: list[dict[str, Any]] = []
@@ -245,7 +260,7 @@ def run_checks(*, check_manifest: bool, require_certification: bool) -> list[dic
     add(checks, "readme.has_build_commands", True, "pdflatex -jobname" in readme and "python -B scripts/replay_all.py --verify" in readme)
     add(checks, "reproduce.uses_read_only_check", True, "replay_all.py --verify" in reproduce and "check_public_package.py --check" in reproduce)
     add(checks, "boundary.has_nonclaims", True, "This package does not claim" in boundary)
-    add(checks, "git.no_remote_before_publish", False, (ROOT / ".git").exists())
+    add(checks, "git.no_remote_before_publish", [], git_remotes())
 
     if check_manifest:
         manifest = ROOT / MANIFEST_REL
