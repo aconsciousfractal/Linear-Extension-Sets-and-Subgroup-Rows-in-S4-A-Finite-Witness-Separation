@@ -94,10 +94,15 @@ def check_certificates() -> list[dict[str, object]]:
     return out
 
 
+def write_text_lf(path: Path, text: str) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(text)
+
+
 def write_hash_manifest() -> None:
     lines = [f"{digest}  {rel}" for rel, digest in expected_hash_entries().items()]
     HASH_MANIFEST.parent.mkdir(parents=True, exist_ok=True)
-    HASH_MANIFEST.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    write_text_lf(HASH_MANIFEST, "\n".join(lines) + "\n")
 
 
 def run_package_checker(*, write_mode: bool) -> subprocess.CompletedProcess[str]:

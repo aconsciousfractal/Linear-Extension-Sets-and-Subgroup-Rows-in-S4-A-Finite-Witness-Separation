@@ -295,10 +295,15 @@ def result_from_checks(checks: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def write_text_lf(path: Path, text: str) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(text)
+
+
 def write_release_files(result: dict[str, Any]) -> None:
     out = ROOT / CERTIFICATION_REL
-    out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    (ROOT / MANIFEST_REL).write_text(computed_package_manifest_text(), encoding="utf-8")
+    write_text_lf(out, json.dumps(result, indent=2) + "\n")
+    write_text_lf(ROOT / MANIFEST_REL, computed_package_manifest_text())
 
 
 def main() -> int:
